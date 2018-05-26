@@ -18,9 +18,7 @@ Over the past years, the iOS development process has shifted drastically:
 - from instant roll outs to A/B testing, slow rollouts and automatic regression detection
 
 
-### I. Codebase
-
-### II. Dependencies
+### Dependencies
 
 > Explicitly declare and isolate dependencies
 
@@ -57,7 +55,7 @@ gem "cocoapods", "=1.5"
 
 To `Gemfile` and the automatically generated `Gemfile.lock` must be checked into version control. Any build system can then run `bundle install` to install all Ruby-based build dependencies.
 
-### III. Config
+### Config
 
 > Inject configuration during build time
 
@@ -74,27 +72,30 @@ A litmus test for whether an app has all config correctly factored out of the co
 There are many ways on how you can inject config values during build time
 
 - [cocoapods-keys](https://github.com/orta/cocoapods-keys) to securely apply secret keys to your iOS app during build time
-- Custom built solution using a build phase
+- Custom built solution (e.g. using a build phase)
 - TODO: Are there any alternatives?
 
-### IV. Backing services
+As deployments on the iOS platform are significantly slower than server deployments, you might want a way to quickly change config over the air (OTA) to react to issues fast. 
 
-I'll have to think about how we can apply this to mobile.
+OTA config updates are powerful and allow you to instantly
 
-### V. Build, release, run
+- Run A/B tests to enable certain features or UI changes only for a subset of your active users
+- Rotate API keys
+- Update web hosts or other URLs that have changed
 
-> Strictly separate build and run stages
+Without OTA updates you have to wait for about a day for app review to accept your app, while risking of being rejected and delaying the release. 
 
-A codebase is transformed into a (non-development) deploy through three stages:
+At the same time you might want to be backwards compatible, meaning users who can't upgrade to the most recent iOS version might not be able to install any app updates at all.
 
-TODO
+There are various ways to implement OTA updates
 
-### VI. Processes
+- Implement your own solution
+- Proprietary web services like [Firebase remote config](https://firebase.google.com/docs/remote-config/)
 
-### VII. Port binding
-### VIII. Concurrency
-### IV: Disposability
-### X: Dev/prod parity
+### Versioned APIs
+
+
+### Dev/prod parity
 
 > Keep development, staging and production as similar as possible
 
@@ -118,14 +119,19 @@ Summarizing the above into a table:
 | Code authos vs code deployers | One person knows how to deploy | Deployment is automated, ideally on a server |
 | Dev vs production environments | Divergent |  As similar as possible |
 
-
-
 ## Open TODOs
 
+### Backing services
+### Build, release, run
+### Processes
+### Port binding
+### Concurrency
+### Disposability
 - versioned APIs backwards compatible
 - remote config, feature toggles
 - tooling like react native: how do you sync the native code with the JS code
 - OTA updates for config should be possible
+- I can also write about offline support of iOS apps as much as possible, like cache the remote config files, and work, Work out of the box on the first app launch after installing and don’t require internet on first launch unless it’s things like a login
 
 ## Disclaimer
 
