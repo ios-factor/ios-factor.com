@@ -55,6 +55,27 @@ gem "cocoapods", "=1.5"
 
 To `Gemfile` and the automatically generated `Gemfile.lock` must be checked into version control. Any build system can then run `bundle install` to install all Ruby-based build dependencies.
 
+#### JavaScript-based tooling
+
+JavaScript based iOS apps (e.g. React Native) make use of a `package.json` file that defines all dependencies needed.
+
+```javascript
+{
+  ...
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "15.4.2",
+    "react-native": "0.42.3",
+    ...
+  }
+}
+```
+
+The `package.json` should be checked into version control for reproducible builds.
+
 ### Config
 
 > Inject configuration during build time
