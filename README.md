@@ -96,13 +96,14 @@ There are many ways on how you can inject config values during build time
 - Custom built solution (e.g. using a build phase)
 - TODO: Are there any alternatives?
 
-As deployments on the iOS platform are significantly slower than server deployments, you might want a way to quickly change config over the air (OTA) to react to issues fast. 
+As deployments on the iOS platform are significantly slower than server deployments, you might want a way to quickly update config over the air (OTA) to react to issues fast. 
 
 OTA config updates are powerful and allow you to instantly
 
 - Run A/B tests to enable certain features or UI changes only for a subset of your active users
 - Rotate API keys
 - Update web hosts or other URLs that have changed
+- Remotely disable features or hide buttons
 
 Without OTA updates you have to wait for about a day for app review to accept your app, while risking of being rejected and delaying the release. 
 
@@ -195,6 +196,21 @@ All parts of the app that don't necessarily **need** an internet connection (e.g
 - As WiFi hotspots might require a login or confirmation of some sorts (e.g. hotel or airport), HTTPs requests will often get stuck and time out after about a minute. Until Apple resolves this issue to automatically handle it for us, we as developers have to make sure to properly handle those situations (TODO: Find screenshot of FB messenger doing this properly)
 - Never assume a user has a working internet connection on the first launch of the app. The user might install your app and then doesn't launch it until they're on the go without an internet connection. You are responsible for shipping your app in a state that it works out of the box with the most up to date resources during deploy time. This directly plays together with the deployment strategy covered in this project
 
+### Backwards-compatible APIs
+
+> Build APIs that don't assume every user updates to the latest version
+
+While the majority of your end-users will update to the most recent update within a few weeks, there will always be a subset of users who won't. This can have multiple reasons. Often it is related to the iOS version they run, which they can't always update depending on how old the given iOS device is.
+
+You can install and use Facebook Messenger on a first generation iPad (2010). While newer features are not supported, the core functionality is still available thanks to API versioning.
+
+The basic concept is that you don't update an existing API, but add a new one instead and let them run in parallel
+
+```
+https://your-api.com/1.0/drivers.json
+https://your-api.com/1.1/drivers.json
+```
+
 ## Open TODOs
 
 ### Backing services
@@ -202,9 +218,9 @@ All parts of the app that don't necessarily **need** an internet connection (e.g
 ### Processes
 ### Port binding
 ### Concurrency
-### Versioned APIs
+### deploy from a separate machine
+
 ### Disposability
-- versioned APIs backwards compatible
 
 - tooling like react native: how do you sync the native code with the JS code
 
