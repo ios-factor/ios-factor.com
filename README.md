@@ -1,6 +1,8 @@
 # ios-factor
 
-Inspired by the famous [twelve-factor app framework](https://www.12factor.net/), a methodology to write web services.
+Inspired by the famous [twelve-factor app framework](https://www.12factor.net/), a methodology to write web services. This project uses the same structure and similar principals, re-written and applied to iOS app.
+
+This project was started by [@KrauseFx](https://twitter.com/KrauseFx)
 
 ## Background
 
@@ -16,9 +18,9 @@ Over the past years, the iOS development process has shifted drastically:
 - from instant roll outs to A/B testing, slow rollouts and automatic regression detection
 
 
-### 1. Codebase
+### I. Codebase
 
-### 2. Dependencies
+### II. Dependencies
 
 > Explicitly declare and isolate dependencies
 
@@ -54,6 +56,30 @@ gem "cocoapods", "=1.5"
 ```
 
 To `Gemfile` and the automatically generated `Gemfile.lock` must be checked into version control. Any build system can then run `bundle install` to install all Ruby-based build dependencies.
+
+### III. Config
+
+> Inject configuration during build time
+
+An app’s config is everything that is likely to vary between deploys (App Store, TestFlight, local development). This includes:
+
+- API keys for backend services (internal as well as external services)
+- URLs for remote resources (the APIs your app uses)
+- Feature toggles
+
+Apps sometimes store config as constants in the code. This is a violation of twelve-factor, which requires strict separation of config from code. Config varies substantially across deploys, code does not.
+
+A litmus test for whether an app has all config correctly factored out of the code is whether the codebase could be made open source at any moment, without compromising any credentials.
+
+There are many ways on how you can inject config values during build time
+
+- [cocoapods-keys](https://github.com/orta/cocoapods-keys) to securely apply secret keys to your iOS app during build time
+- Custom built solution using a build phase
+- TODO: Are there any alternatives?
+
+### IV. Backing services
+
+I'll have to think about how we can apply this to mobile.
 
 
 ## Disclaimer
