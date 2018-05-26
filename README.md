@@ -24,9 +24,11 @@ Over the past years, the iOS development process has shifted drastically:
 
 Ideally, an `ios-factor` iOS app never relies on implicit existence of system-wide packages. It declares all dependencies, completely and exactly via a dependency declaration manifest. This includes the exact versions of Xcode, CocoaPods and fastlane. 
 
+The benefit of explicit dependency declaration is that it simplifies setup for developers new to the app, as well as having a reliable build system that is also able to run past builds again in a reproducible fashion. A new developer can check out the app’s codebase onto their development machine, requiring only the language runtime and dependency manager installed as prerequisites. They will be able to set up everything needed to run the app’s code with a deterministic build command.
+
 Since iOS development can't be containerized like it's already the case for web development, we're limited to third party tools trying to fullfill this requirement until Apple helps us out.
 
-For the time being, you can use various third party tooling to explicitly declare those dependencies:
+For the time being, you can use various third party tooling to explicitly declare those dependencies.
 
 #### Swift-based tooling
 
@@ -51,7 +53,7 @@ gem "fastlane", ">= 2.96.1", "<= 3.0.0"
 gem "cocoapods", "=1.5"
 ```
 
-To `Gemfile` and the automatically generated `Gemfile.lock` must be checked into version control. Any build system can then run `bundle install` to install all Ruby-based build dependencies
+To `Gemfile` and the automatically generated `Gemfile.lock` must be checked into version control. Any build system can then run `bundle install` to install all Ruby-based build dependencies.
 
 
 ## Disclaimer
