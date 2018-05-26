@@ -67,7 +67,7 @@ An app’s config is everything that is likely to vary between deploys (App Stor
 - URLs for remote resources (the APIs your app uses)
 - Feature toggles
 
-Apps sometimes store config as constants in the code. This is a violation of twelve-factor, which requires strict separation of config from code. Config varies substantially across deploys, code does not.
+Apps sometimes store config as constants in the code. This is a violation of ios-factor, which requires strict separation of config from code. Config varies substantially across deploys, code does not.
 
 A litmus test for whether an app has all config correctly factored out of the code is whether the codebase could be made open source at any moment, without compromising any credentials.
 
@@ -81,6 +81,42 @@ There are many ways on how you can inject config values during build time
 
 I'll have to think about how we can apply this to mobile.
 
+### V. Build, release, run
+
+> Strictly separate build and run stages
+
+A codebase is transformed into a (non-development) deploy through three stages:
+
+TODO
+
+### VI. Processes
+
+### VII. Port binding
+### VIII. Concurrency
+### IV: Disposability
+### X: Dev/prod parity
+
+> Keep development, staging and production as similar as possible
+
+Historically, there have been substantial gaps between development (a developer making live edits to the app on their local machine) and production (an app deployed on the App Store accessed by end users). These gaps manifest in three areas:
+
+- The time gap: A developer may work on code that takes days, weeks, or even months to go into production
+- The personnel gap: Developers write code, release engineers or just a single engineer deploy new versions
+- The tools gap: Developers may be using a staging server that runs a different version than the production one. Developers might be using a different Xcode release than the one that was used for deployment
+
+The ios-factor app is designed for [continuous deployment](https://avc.com/2011/02/continuous-deployment/) by keeping the gap between development and production small. Looking at the three gaps described above:
+
+- Make the time gap small: a developer may write code and have it deployed just a few days later
+- Make the personnel gap small: developers who wrote code are closely involved in deploying it and watching its behavior in production. This is best possible by completely automating the release process of your iOS app and put the know-how on how to do it in code declarations instead of documentation.
+- Make the tools gap small: keep development and production as similar as possible. Follow the principals of the `Dependencies` section of ios-factor and make use of an `.xcode-version` file as well as define all other dependencies.
+
+
+## Open TODOs
+
+- versioned APIs backwards compatible
+- remote config, feature toggles
+- tooling like react native: how do you sync the native code with the JS code
+- OTA updates for config should be possible
 
 ## Disclaimer
 
