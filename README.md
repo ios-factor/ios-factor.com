@@ -8,29 +8,29 @@ This project was started by [@KrauseFx](https://twitter.com/KrauseFx)
 
 Over the past years, the iOS development process has shifted drastically:
 
-- from supporting a single device, to a wide range of available iOS powered iPhones and iPads and various platforms like tvOS and watchOS
+- from supporting a single device to a wide range of available iOS-powered iPhones and iPads and various platforms like tvOS and watchOS
 - from directly drawing user interfaces using `drawRect` to AutoLayout
 - from iOS apps mostly running locally on-device, to iOS apps heavily relying on backend services
 - from iOS app review times of more than 2 weeks to less than a day
 - from installing an app on your phone using iTunes to distributing apps through the official TestFlight channel
 - from uploading 5 screenshots per language to iTunes Connect to 110 per language, as well as app previews
 - from slow releases whenever something is ready, to shipping every single week
-- from instant roll outs to A/B testing, slow rollouts and automatic regression detection
+- from instant rollouts to A/B testing, slow rollouts and automatic regression detection
 - from manually including git submodules to using dependency managers
 
-This project describes the ideal state of iOS app development. Due to certain limitations (like Xcode requiring macOS) not all requirements can be fullfilled. This project aims to define a goal, as well as the best current approaches to solve some of the challenges.
+This project describes the ideal state of iOS app development. Due to certain limitations (like Xcode requiring macOS) not all requirements can be fulfilled. This project aims to define a goal, as well as the best current approaches to solve some of the challenges.
 
 ### Dependencies
 
 > Explicitly declare and isolate dependencies
 
-Ideally, an `ios-factor` iOS app never relies on implicit existence of system-wide packages. It declares all dependencies, completely and exactly via a dependency declaration manifest. This includes the exact versions of Xcode, CocoaPods and fastlane. 
+Ideally, an `ios-factor` iOS app never relies on the implicit existence of system-wide packages. It declares all dependencies, completely and exactly via a dependency declaration manifest. This includes the exact versions of Xcode, CocoaPods and fastlane. 
 
 The benefit of explicit dependency declaration is that it simplifies setup for developers new to the app, as well as having a reliable build system that is also able to run past builds again in a reproducible fashion. A new developer can check out the app’s codebase onto their development machine, requiring only the language runtime and dependency manager installed as prerequisites. They will be able to set up everything needed to run the app’s code with a deterministic build command.
 
-Since iOS development can not be containerized like it's already the case for web development, we're limited to third party tools trying to fullfill this requirement until Apple helps us out.
+Since iOS development cannot be containerized like it's already the case for web development, we're limited to third party tools trying to fulfill this requirement until Apple helps us out.
 
-For the time being, you can use various third party tooling to explicitly declare those dependencies.
+For the time being, you can use various third-party tooling to explicitly declare those dependencies.
 
 #### Swift-based tooling
 
@@ -38,7 +38,7 @@ TODO
 
 #### Xcode version
 
-You can use an [.xcode-version](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) file in the root of your iOS project to declare the exact version of Xcode to be used for a given iOS app.
+You can use a [.xcode-version](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) file in the root of your iOS project to declare the exact version of Xcode to be used for a given iOS app.
 
 This way, you can configure your CI-system to automatically install and use a given Xcode version. 
 
@@ -107,9 +107,9 @@ OTA config updates are powerful and allow you to instantly
 - Update web hosts or other URLs that have changed
 - Remotely disable features or hide buttons
 
-Without OTA updates you have to wait for about a day for app review to accept your app, while risking of being rejected and delaying the release. 
+Without OTA updates you have to wait for about a day for app review to accept your app while risking of being rejected and delaying the release. 
 
-At the same time you might want to be backwards compatible, meaning users who can't upgrade to the most recent iOS version might not be able to install any app updates at all.
+At the same time, you might want to be backward compatible, meaning users who can't upgrade to the most recent iOS version might not be able to install any app updates at all.
 
 There are various ways to implement OTA updates
 
@@ -120,7 +120,7 @@ There are various ways to implement OTA updates
 
 > Keep development, staging and production as similar as possible
 
-Historically, there have been substantial gaps between development (a developer making live edits to the app on their local machine) and production (an app deployed on the App Store accessed by end users). These gaps manifest in three areas:
+Historically, there has been substantial gaps between development (a developer making live edits to the app on their local machine) and production (an app deployed on the App Store accessed by end users). These gaps manifest in three areas:
 
 - The time gap: A developer may work on code that takes days, weeks, or even months to go into production
 - The personnel gap: All iOS developers write code, just one person knows how to deploy the app
@@ -130,7 +130,7 @@ The ios-factor app is designed for [continuous deployment](https://avc.com/2011/
 
 - Make the time gap small: a developer may write code and have it deployed just a few days later
 - Make the personnel gap small: developers who wrote code are closely involved in deploying it and watching its behavior in production. This is best possible by completely automating the release process of your iOS app and put the know-how on how to do it in code declarations instead of documentation.
-- Make the tools gap small: keep development and production as similar as possible. Follow the principals of the `Dependencies` section of ios-factor and make use of an `.xcode-version` file as well as define all other dependencies explicitly.
+- Make the tools gap small: keep development and production as similar as possible. Follow the principals of the `Dependencies` section of ios-factor and make use of a `.xcode-version` file as well as define all other dependencies explicitly.
 
 Summarizing the above into a table:
 
@@ -146,7 +146,7 @@ Summarizing the above into a table:
 
 As described in the `Dependencies` section, the code repository should include all dependencies needed to build, test and release the iOS app.
 
-As soon as your app fullfills that requirement, you can release new app updates from **any** machine (Note: currently we are limited to macOS-based machines until Apple opens up their toolchain for Linux)
+As soon as your app fulfills that requirement, you can release new app updates from **any** machine (Note: currently we are limited to macOS-based machines until Apple opens up their toolchain for Linux)
 
 In an ideal world, to release an app update you would
 
@@ -154,7 +154,7 @@ In an ideal world, to release an app update you would
 - automatically install all dependencies (e.g. Xcode and CocoaPods)
 - run the deployment script (e.g. fastlane)
 
-Unfortunately due to the fact that Xcode has to run on macOS, and macOS virtualization comes with technical as well as legal challenges, we can't use this approach (yet).
+Unfortunately, due to the fact that Xcode has to run on macOS, and macOS virtualization comes with technical as well as legal challenges, we can't use this approach (yet).
 
 There are many reasons why in the recent years more and more development processes make use of disposable containers:
 
@@ -177,14 +177,14 @@ Many companies use the concept of "Release trains": a schedule in which a new ve
 
 > Keep the iOS app smart enough to operate without a backend as much as possible
 
-In the recent years, some development teams started using approaches that require less development work, on the expense of the user's app experience by moving most of the logic to a remote backend and having the iOS app be a thin client just showing the server results. This approach results in user frustation when the app is used in situation with a less than perfect internet connection (like a subway, elevator or a spotty WiFi).
+In the recent years, some development teams started using approaches that require less development work, on the expense of the user's app experience by moving most of the logic to a remote backend and having the iOS app be a thin client just showing the server results. This approach results in user frustration when the app is used in a situation with a less than perfect internet connection (like a subway, elevator or a spotty WiFi).
 
 An app should do as much of the business logic and calculations on-device as possible for a variety of reasons:
 
 - Privacy: avoid sending data to a remote server not controlled by the user
 - Speed: Sending data to a server and waiting for a response requires time and might fail (e.g. spotty WiFi)
 - Data usage: users have monthly data limits, you don't want to unnecessarily drain their account
-- Scaling: If you app goes viral, you are responsible to properly scale the backend services up
+- Scaling: If your app goes viral, you are responsible to properly scale the backend services up
 
 Most iOS app require some kind of backend for certain tasks, like authentication, more complex calculations or storing of content.
 
@@ -204,7 +204,7 @@ All parts of the app that don't necessarily **need** an internet connection (e.g
 
 While the majority of your end-users will update to the most recent update within a few weeks, there will always be a subset of users who won't. This can have multiple reasons. Often it is related to the iOS version they run, which they can't always update depending on how old the given iOS device is.
 
-You can install and use Facebook Messenger on a first generation iPad (2010). While newer features are not supported, the core functionality is still available thanks to API versioning.
+You can install and use Facebook Messenger on a first-generation iPad (2010). While newer features are not supported, the core functionality is still available thanks to API versioning.
 
 The basic concept is that you don't update an existing API, but add a new one instead and let them run in parallel
 
@@ -215,7 +215,7 @@ https://your-api.com/1.1/drivers.json
 
 ### App versioning
 
-> Automate your app's buid & version numbers
+> Automate your app's build & version numbers
 
 To recap:
 
@@ -226,9 +226,9 @@ To recap:
 
 [More details in the official Apple Docs](https://developer.apple.com/library/content/technotes/tn2420/_index.html)
 
-In today's iOS development processes there is no reason you want to manually change those numbers. Instead you want a reliable and automated process taking care of this.
+In today's iOS development processes there is no reason you want to manually change those numbers. Instead, you want a reliable and automated process taking care of this.
 
-There is no need to use third party tools for this, Xcode has a tool called `agvtool` built-in ([more details](https://developer.apple.com/library/content/qa/qa1827/_index.html)).
+There is no need to use third-party tools for this, Xcode has a tool called `agvtool` built-in ([more details](https://developer.apple.com/library/content/qa/qa1827/_index.html)).
 
 After enabling the `Versioning System` for your Xcode project once, you can use the following commands:
 
@@ -268,4 +268,4 @@ Never store sensitive user-information (like passwords or sessions) in those dir
 
 This project is licensed under the terms of the MIT license. See the [LICENSE](LICENSE) file.
 
-This project are in no way affiliated with Apple Inc or Google Inc. 
+This project is in no way affiliated with Apple Inc or Google Inc. 
