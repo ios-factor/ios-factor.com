@@ -243,6 +243,7 @@ If you use the deployment tool _fastlane_ you can use [increment_version_number]
 ## Open TODOs
 
 - tooling like react native: how do you sync the native code with the JS code
+- keychain and storing login
 
 ## Disclaimer
 
