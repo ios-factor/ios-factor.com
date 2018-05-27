@@ -1,6 +1,6 @@
 # ios-factor
 
-Inspired by the famous [twelve-factor app framework](https://www.12factor.net/), a methodology to write web services. This project uses the same structure and similar principals, re-written and applied to iOS app.
+Inspired by the famous [twelve-factor app framework](https://www.12factor.net/), a methodology to write high-quality web services. This project uses the same structure and similar principals, re-written and applied to iOS apps.
 
 This project was started by [@KrauseFx](https://twitter.com/KrauseFx)
 
@@ -10,13 +10,15 @@ Over the past years, the iOS development process has shifted drastically:
 
 - from supporting a single device, to a wide range of available iOS powered iPhones and iPads and various platforms like tvOS and watchOS
 - from directly drawing user interfaces using `drawRect` to AutoLayout
-- from iOS apps mostly running locally, to iOS apps heavily relying on backend services
-- from 2 weeks iOS app review times to less than a day
+- from iOS apps mostly running locally on-device, to iOS apps heavily relying on backend services
+- from iOS app review times of more than 2 weeks to less than a day
 - from installing an app on your phone using iTunes to distributing apps through the official TestFlight channel
 - from uploading 5 screenshots per language to iTunes Connect to 110 per language, as well as app previews
 - from slow releases whenever something is ready, to shipping every single week
 - from instant roll outs to A/B testing, slow rollouts and automatic regression detection
+- from manually including git submodules to using dependency managers
 
+This project describes the ideal state of iOS app development. Due to certain limitations (like Xcode requiring macOS) not all requirements can be fullfilled. This project aims to define a goal, as well as the best current approaches to solve some of the challenges.
 
 ### Dependencies
 
@@ -26,7 +28,7 @@ Ideally, an `ios-factor` iOS app never relies on implicit existence of system-wi
 
 The benefit of explicit dependency declaration is that it simplifies setup for developers new to the app, as well as having a reliable build system that is also able to run past builds again in a reproducible fashion. A new developer can check out the app’s codebase onto their development machine, requiring only the language runtime and dependency manager installed as prerequisites. They will be able to set up everything needed to run the app’s code with a deterministic build command.
 
-Since iOS development can't be containerized like it's already the case for web development, we're limited to third party tools trying to fullfill this requirement until Apple helps us out.
+Since iOS development can not be containerized like it's already the case for web development, we're limited to third party tools trying to fullfill this requirement until Apple helps us out.
 
 For the time being, you can use various third party tooling to explicitly declare those dependencies.
 
@@ -59,7 +61,7 @@ To `Gemfile` and the automatically generated `Gemfile.lock` must be checked into
 
 JavaScript based iOS apps (e.g. React Native) make use of a `package.json` file that defines all dependencies needed.
 
-```javascript
+```json
 {
   ...
   "scripts": {
