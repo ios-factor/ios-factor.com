@@ -1,0 +1,25 @@
+---
+layout: page
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+
+    <h2 class="factor-slogan">
+      Explicitly declare and isolate dependencies
+    </h2>
+
+    {{ content }}
+  </div>
+
+  <p class="extra-info">
+    {% if page.tags.size > 0 %}
+      Tags: {{ page.tags | join: ', ' }} &nbsp; | &nbsp; 
+    {% endif %}
+    {% include fork.html %}
+  </p>
+</article>

@@ -1,0 +1,12 @@
+- title: Dependencies
+  subtitle: Explicitly declare and isolate dependencies
+  link: dependencies
+  index: "I"
+- title: Config
+  subtitle: Inject configuration during build time
+  link: config
+  index: "II"
+- title: Dev/prod parity
+  subtitle: Keep development, testing and production as similar as possible
+  link: dev-prod-parity
+  index: "III"

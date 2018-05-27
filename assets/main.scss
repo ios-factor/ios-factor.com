@@ -1,0 +1,468 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+$font-color: #353535;
+$title-color: #111;
+$header-inactive-color: #9c9c9c;
+$no-sidebar: "800px";
+
+/* Added by Felix */
+#sidebar {
+  float: right;
+  top: 75px;
+  right: 0;
+  width: 269px;
+  padding: 20px;
+  margin-left: 60px;
+  padding-top: 0px;
+  border-left: 1px solid #EEE;
+
+  a {
+    text-decoration: none;
+  }
+
+  display: none;
+}
+
+.video-box {
+  border-left: 2px solid #00558d;
+  padding: 0 15px;
+  margin: 30px 0;
+
+  a {
+    text-decoration: none;
+    font-size: 18px;
+  }
+}
+
+.subscribe-form {
+  button {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background-color: #272727;
+    color: white;
+    font-style: normal;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+    padding: 5px;
+  }
+}
+.site-footer {
+  background: #EEE;
+}
+
+h2.factor-long {
+  margin-bottom: 0px;
+}
+
+h3.factor-long {
+  color: #555;
+}
+
+
+.subscribe-newsletter {
+  color: rgba(68, 68, 68, 0.7);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+/* Hide sidebar on mobile devices */
+@media screen and (min-width: $no-sidebar) {
+  #sidebar {
+    display: inline;
+  }
+}
+
+.pagination {
+  text-align: center;
+  margin-right: 40px;
+}
+
+p.extra-info {
+  color: #aaa;
+  font-size: 15px;
+}
+
+a.forkButton {
+  text-decoration: none;
+  svg {
+    path {
+      
+    }
+  }
+}
+
+hr {
+  color: #bbb;
+  background-color: #bbb;
+  height: 1px;
+  flex: 0 1 auto;
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+}
+
+.side-projects-note {
+  line-height: 100%;
+}
+
+small {
+  color: rgba(68, 68, 68, 0.70);
+}
+
+blockquote {
+  margin-left: 30px;
+  margin-top: 0px;
+  margin-bottom: 16px;
+  border-left-width: 3px;
+  font-size: 14px;
+  padding: 0 1em;
+
+  * {
+    font-style: normal !important;
+    letter-spacing: 0;
+
+    color: #6a737d !important;
+  }
+}
+
+.mainContent {
+  max-width: calc(100%);
+}
+@media screen and (min-width: $no-sidebar) {
+  .mainContent {
+    max-width: calc(100% - 360px);
+  }
+}
+
+.post-content {
+  img {
+    max-width: calc(100% - 10px);
+  }
+  img.inline-img {
+    margin: 20px;
+  }
+
+  h1 {
+    border-bottom: rgb(234, 236, 239);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    font-size: 32px;
+    color: rgb(36, 41, 46);
+    line-height: 40px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #eaecef;
+    line-height: 1.25;
+    color: rgb(36, 41, 46);
+    margin-top: 24px;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #24292e !important;
+    line-height: 25px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  h5 {
+    color: rgb(36, 41, 46);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17.5px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+}
+
+body, html{
+    overflow-x: hidden;
+}
+
+.home {
+  article {
+    margin-bottom: 70px;
+  }
+}
+
+.wrapper {
+  max-width: -webkit-calc(340px + #{$content-width} - (#{$spacing-unit} * 2)) !important;
+  max-width:         calc(340px + #{$content-width} - (#{$spacing-unit} * 2)) !important;
+}
+
+.post-title {
+  a {
+    color: $title-color !important;
+    text-decoration: none;
+    &:hover {
+      color: #0037F5 !important;
+    }
+  }
+
+  font-weight: 500;
+  font-size: 35px !important;
+
+  @include relative-font-size(1.3);
+  letter-spacing: 0px;
+  line-height: 1.4em;
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(1.3);
+  }
+}
+
+.factor-slogan {
+  border-bottom: none !important;
+  font-weight: 400 !important;
+  margin-bottom: 30px !important;
+  margin-top: -25px !important;
+  color: #555 !important;
+}
+
+.site-header {
+  border-top: none;
+  border-bottom: none;
+  height: 250px;
+  background-color: #222;
+  text-align: center;
+
+  .wrapper {
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  .site-title {
+    color: white !important;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    line-height: 1.2em;
+    font-size: 32px;
+    float: unset;
+  }
+
+  .ios-factor-logo {
+    height: 150px;
+    margin-bottom: 15px;
+  }
+
+  .trigger {
+    margin-top: 20px;
+
+    a.active {
+      color: $title-color !important;
+      &:visited {
+        color: $title-color !important;
+      }
+    }
+
+    a {
+      margin-right: 20px;
+      padding-left: 10px;
+      text-decoration: none;
+      color: $header-inactive-color;
+
+      &:visited {
+        color: $header-inactive-color !important;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* Mobile view, the header buttons were misaligned without this */
+@media screen and (max-width: 600px) {
+  .site-nav .page-link {
+    margin-right: 0 !important;
+  }
+}
+
+a {
+  text-decoration: underline;
+}
+
+p {
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  color: $font-color;
+}
+
+ul {
+  margin-top: 0;
+}
+
+li {
+  color: $font-color;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+li+li {
+  margin-top: 0.25em;
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: $font-color;
+}
+
+a {
+  color: #0085bd !important; 
+}
+
+footer {
+  a {
+    text-decoration: none;
+  }
+}
+
+a:visited {
+  color: #0085bd;
+}
+
+h1, h2, h3 {
+  color: #111; /* Darker */
+}
+
+.site-title {
+  color: $font-color !important;
+}
+
+.post-meta {
+  margin-top: -10px;
+
+  * {
+    color: #aaa;
+  }
+}
+
+.page-content {
+  padding-top: 40px;
+}
+
+code {
+  background-color: rgba(27,31,35,0.05);
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
+  font-size: 85%;
+}
+
+
+/* Syntax Highlighting */
+/* Taken from https://github.com/mojombo/tpw/blob/master/css/syntax.css */
+
+$code-background-color: #f7f7f7;
+$code-keyword: #a71d5d;
+$code-key: #0086b3;
+$code-string: #183691;
+$code-default-color: #333;
+
+.highlight { 
+  background-color: $code-background-color !important; 
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: $code-default-color !important;
+  border: none !important;
+  padding-left: 10px !important;
+  padding-top: 8px !important;
+  padding-bottom: 1px !important;
+
+  * {
+    font-size: 13px !important;
+    background-color: $code-background-color !important; 
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
+  }
+}
+.highlight  { background: $code-background-color !important; }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { font-weight: normal; color: $code-keyword !important; } /* Keyword */
+.highlight .o { font-weight: normal } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: normal } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: normal; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: normal } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { font-weight: normal } /* Keyword.Constant */
+.highlight .kd { font-weight: normal } /* Keyword.Declaration */
+.highlight .kp { font-weight: normal; color: $code-keyword; } /* Keyword.Pseudo */
+.highlight .kr { font-weight: normal } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: normal } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: $code-string } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: normal } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: normal } /* Name.Exception */
+.highlight .nf { color: $code-default-color; font-weight: normal } /* Name.Function */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { font-weight: normal } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: $code-string } /* Literal.String.Backtick */
+.highlight .sc { color: $code-string } /* Literal.String.Char */
+.highlight .sd { color: $code-string } /* Literal.String.Doc */
+.highlight .s2 { color: $code-string } /* Literal.String.Double */
+.highlight .se { color: $code-string } /* Literal.String.Escape */
+.highlight .sh { color: $code-string } /* Literal.String.Heredoc */
+.highlight .si { color: $code-string } /* Literal.String.Interpol */
+.highlight .sx { color: $code-string } /* Literal.String.Other */
+.highlight .sr { color: $code-string } /* Literal.String.Regex */
+.highlight .s1 { color: $code-string } /* Literal.String.Single */
+.highlight .ss { color: $code-key } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
