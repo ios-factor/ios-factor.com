@@ -137,7 +137,7 @@ Summarizing the above into a table:
 |          | Traditional iOS app | ios-factor app |
 |----------|---------------------|----------------|
 | Time between deploys | Months  | Days           |
-| Code authos vs code deployers | One person knows how to deploy | Deployment is automated, ideally on a server |
+| Code authors vs code deployers | One person knows how to deploy | Deployment is automated, ideally on a server |
 | Dev vs production environments | Divergent |  As similar as possible |
 
 ### Deployment
