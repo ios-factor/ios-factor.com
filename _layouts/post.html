@@ -1,25 +1,46 @@
 ---
 layout: page
 ---
+{% for factor in site.data.factors %}
+  {% assign currentFactorURL = "/" | append: factor.link %}
+  {% if currentFactorURL == page.url %}
+    {% assign subtitle = factor.subtitle %}
+    {% assign index = factor.index %}
+
+    {% assign nextLink = site.data.factors[forloop.index].link %}
+
+    {% assign previousIndex = forloop.index | minus: 2 %}
+    {% if previousIndex >= 0 %}
+      {% assign previousLink = site.data.factors[previousIndex].link %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
+    <h1 class="post-title" itemprop="name headline">
+      {{ index }}. {{ page.title | escape }}
+    </h1>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-
     <h2 class="factor-slogan">
-      Explicitly declare and isolate dependencies
+      {{ subtitle }}
     </h2>
 
     {{ content }}
-  </div>
 
-  <p class="extra-info">
-    {% if page.tags.size > 0 %}
-      Tags: {{ page.tags | join: ', ' }} &nbsp; | &nbsp; 
-    {% endif %}
-    {% include fork.html %}
-  </p>
+    <hr />
+    <div class="pager">
+      {% if previousLink %}
+        <a class="previous" href="{{previousLink}}">Previous</a>
+      {% endif %}
+
+      {% include fork.html %}
+
+      {% if nextLink %}
+        <a class="next" href="{{nextLink}}">Next</a>
+      {% endif %}
+    </div>
+  </div>
 </article>

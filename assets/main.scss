@@ -27,6 +27,25 @@ $no-sidebar: "800px";
   display: none;
 }
 
+.pager {
+  text-align: center; /* for the GitHub button */
+  height: 60px;
+
+  a {
+    text-decoration: none;
+  }
+
+  .next {
+    float: right;
+    font-size: 28px;
+  }
+
+  .previous {
+    float: left;
+    font-size: 28px;
+  }
+}
+
 .video-box {
   border-left: 2px solid #00558d;
   padding: 0 15px;
