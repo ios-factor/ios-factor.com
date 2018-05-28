@@ -1,6 +1,6 @@
-# ios-factor
+# [ios-factor.com](https://ios-factor.com)
 
-## Open TODOs
+## Open tasks:
 
 - tooling like react native: how do you sync the native code with the JS code
 - keychain and storing login
