@@ -3,7 +3,7 @@ layout: post
 permalink: deployment
 ---
 
-As described in the `Dependencies` section, the code repository should include all dependencies needed to build, test and release the iOS app.
+As described in the [Dependencies](/dependencies) factor, the code repository should include all dependencies needed to build, test and release the iOS app.
 
 As soon as your app fulfills that requirement, you can release new app updates from **any** machine (Note: currently we are limited to macOS-based machines until Apple opens up their toolchain for Linux)
 
@@ -25,7 +25,7 @@ Right now, the best approach we as iOS developers can take is:
 
 - Automate the installation of Xcode using [xcode-install](https://github.com/krausefx/xcode-install)
 - Make use of an [.xcode-version file](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md)
-- Define all dependencies in configuration files (see `Dependencies` section)
+- Define all dependencies in configuration files (see [Dependencies](/dependencies) factor)
 - Automate the complete deployment process using [fastlane](https://fastlane.tools)
 - Automate code signing (e.g. [codesigning.guide](https://codesigning.guide))
 - Deploy often, ideally on a weekly schedule
