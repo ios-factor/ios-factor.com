@@ -3,7 +3,7 @@
   link: dependencies
   index: "I"
 - title: Config
-  subtitle: Inject configuration during build time
+  subtitle: No configuration in code, ship with default config & allow OTA updates
   link: config
   index: "II"
 - title: Dev/prod parity
