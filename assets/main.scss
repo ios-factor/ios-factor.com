@@ -27,6 +27,12 @@ $no-sidebar: "800px";
   display: none;
 }
 
+.all-factors {
+  background-color: #DDD;
+  padding: 20px;
+  margin: 0 -20px;
+}
+
 .pager {
   text-align: center; /* for the GitHub button */
   height: 60px;
@@ -275,6 +281,8 @@ body, html{
   border-bottom: none;
   height: 250px;
   background-color: #222;
+  text-align: center;
+  cursor: pointer;
   text-align: center;
 
   .wrapper {

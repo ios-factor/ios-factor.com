@@ -7,6 +7,7 @@ A detailed description about this project is available on [iOS-factor.com](https
 - `index.md`: The landing page of [iOS-factor.com](https://ios-factor.com)
 - `_data/factors.yml`: The index of all the factors and their subtitles
 - `factors/*.md`: The content of each factor
+- `assets/main.scss`: The `.scss` file that defines all the style sheets
 
 ## How to contribute
 
