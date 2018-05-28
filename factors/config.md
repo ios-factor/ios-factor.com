@@ -1,6 +1,5 @@
 ---
 layout: post
-title: Config
 permalink: config
 ---
 

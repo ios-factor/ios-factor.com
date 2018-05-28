@@ -1,4 +1,7 @@
-# ios-factor
+---
+layout: post
+permalink: persistence-of-data
+---
 
 Storing data and configuration according to Apple's guideline is crucial for your app's lifecycle, in particular when it comes to iCloud sync, upgrading to a new phone and restoring a phone from a backup.
 
@@ -11,24 +14,4 @@ Storing data and configuration according to Apple's guideline is crucial for you
 
 Never store sensitive user-information (like passwords or sessions) in those directories. Use the Keychain API, which comes with various advantages:
 
-<!-- TODO: finish -->
-
-## Open TODOs
-
-- tooling like react native: how do you sync the native code with the JS code
-- keychain and storing login
-
-## How to contribute
-
-To run the server locally:
-
-- `git clone https://github.com/ios-factor/ios-factor.com`
-- `bundle install`
-- `bundle exec jekyll serve`
-- Open [http://127.0.0.1:4000](http://127.0.0.1:4000)
-
-## Disclaimer
-
-This project is licensed under the terms of the MIT license. See the [LICENSE](LICENSE) file.
-
-This project is in no way affiliated with Apple Inc or Google Inc. 
+TODO: finish

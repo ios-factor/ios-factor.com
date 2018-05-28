@@ -10,3 +10,23 @@
   subtitle: Keep development, testing and production as similar as possible
   link: dev-prod-parity
   index: "III"
+- title: Deployment
+  subtitle: Automate your deployment so you can release from any machine
+  link: deployment
+  index: "IV"
+- title: Prefer local over remote
+  subtitle: Keep the iOS app smart enough to operate without a backend where possible
+  link: prefer-local-over-remote
+  index: "V"
+- title: Backwards compatible APIs
+  subtitle: Don't assume every user updates to the latest version
+  link: backwards-compatible-apis
+  index: "VI"
+- title: App versioning
+  subtitle: Automate your app's build & version numbers for consistency
+  link: app-versioning
+  index: "VII"
+- title: Persistence of data
+  subtitle: Follow the Apple guidelines when storing data
+  link: persistence-of-data
+  index: "VIII"

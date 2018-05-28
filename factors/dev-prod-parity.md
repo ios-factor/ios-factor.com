@@ -1,6 +1,5 @@
 ---
 layout: post
-title: Dev/prod parity
 permalink: dev-prod-parity
 ---
 
