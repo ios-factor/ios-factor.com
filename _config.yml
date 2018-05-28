@@ -18,7 +18,7 @@ email: ios-factor@krausefx.com
 description: >- # this means to ignore newlines until "baseurl:"
   A methodology for building high-quality iOS applications
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ios-factor.github.io/ios-factor.com/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ios-factor.com" # the base hostname & protocol for your site, e.g. http://example.com
 google_analytics: UA-18658848-15
 
 # Build settings

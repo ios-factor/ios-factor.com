@@ -1,4 +1,4 @@
-# [ios-factor.com](https://ios-factor.com)
+# [iOS-factor.com](https://ios-factor.com)
 
 ## Open tasks:
 

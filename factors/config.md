@@ -9,7 +9,7 @@ An app’s config is everything that is likely to vary between deploys (App Stor
 - URLs for remote resources (the APIs your app uses)
 - Feature toggles
 
-Apps sometimes store config as constants in the code. This is a violation of ios-factor, which requires strict separation of config from code. Config varies substantially across deploys, code does not.
+Apps sometimes store config as constants in the code. This is a violation of iOS-factor, which requires strict separation of config from code. Config varies substantially across deploys, code does not.
 
 A litmus test for whether an app has all config correctly factored out of the code is whether the codebase could be made open source at any moment, without compromising any credentials.
 
