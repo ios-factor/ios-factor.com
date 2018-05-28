@@ -29,6 +29,8 @@ layout: page
       {{ subtitle }}
     </h2>
 
+    {% include fork.html %}
+
     {{ content }}
 
     <hr />
@@ -36,8 +38,6 @@ layout: page
       {% if previousLink %}
         <a class="previous" href="{{previousLink}}">Previous</a>
       {% endif %}
-
-      {% include fork.html %}
 
       {% if nextLink %}
         <a class="next" href="{{nextLink}}">Next</a>

@@ -114,6 +114,10 @@ p.extra-info {
 
 a.forkButton {
   text-decoration: none;
+  display: block;
+  margin-bottom: 30px;
+  text-align: right;
+
   svg {
     path {
       
@@ -261,9 +265,9 @@ body, html{
 .factor-slogan {
   border-bottom: none !important;
   font-weight: 400 !important;
-  margin-bottom: 30px !important;
   margin-top: -25px !important;
   color: #555 !important;
+  margin-bottom: 15px !important;
 }
 
 .site-header {
