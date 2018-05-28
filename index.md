@@ -7,7 +7,7 @@ iOS-factor was inspired by the famous [twelve-factor app framework](https://www.
 
 ## Background
 
-Over the past years, the iOS development process has shifted drastically:
+Over the past 10 years, the iOS development process has shifted drastically:
 
 - from supporting a single device to a wide range of available iOS-powered iPhones and iPads and various platforms like tvOS and watchOS
 - from manually including git submodules to using dependency managers
@@ -20,5 +20,7 @@ Over the past years, the iOS development process has shifted drastically:
 - from full releases to A/B testing, slow rollouts and automatic regression detection
 
 This project describes the ideal state of iOS app development. Due to certain limitations (like Xcode requiring macOS) not all requirements can be fulfilled. This project aims to define a goal, as well as the best current approaches to solve some of the challenges.
+
+-----
 
 {% include all_factors_long.html %}
