@@ -1,0 +1,15 @@
+language: ruby
+cache:
+  bundler: true
+rvm:
+- 2.4.0
+before_install:
+- bundle install
+script:
+- "./deploy.sh"
+branches:
+  only:
+  - master
+env:
+  global:
+    secure: acyFvdlSpKYgI0Jd7kO7/aaUeNpl4htr1CucM4FEA7j8NdOjmu+nMGUzUDkvxuHWBotdVItg6gfc30LySl6/gXWaDgtIF+8Pg4SW9pb0qlTJBmvaimF0qMDpXB+1FLNnwlBa/UwKrSxVPfP/FAjJa+0bNL16vTJJ25dvAjF+54J7uIhIFwdkvaIYtyDFAOmVH8ctyi8JEb7WlLshKvRLNwcaCRVBrB0b4lT6KIOFHypFviwCgqxTPrSpZ+KGX4t2ryPXAIr7E527yj2PGqhAyT4biqdOoYiGv2WtUZwXMDlA6CVx2VZtqr6U1jVJkfg8mxRa5g9kJFHRBy3/UDcE5phEslmaUMuq46N5oCbXxLmZTv+XTSORprMuFNZTcsKApvW+/NlLX5i3CIgxRhWrCwv55L1NxkRAPVgCQPsXBiXttU/8/croa/t/+dM3ES7lul9CEx26sGDQG0UGZ58JBTDqnfJ7ywP/fgt11K9757oz8LXc7Z6gEbtwBOjLrZwBKQsyQJR0RgWYpI2k+H/hEpY2g0fl/awdejg+ZmoSvAgjIMWVr5rVpT/1giI5oe9uV++Ry3325nibCCe9yHPG+zLXkfuMnipfg/EnaMWqjBPrm2uMmANPODDtfdlwCKBdiqFXGQ63m+J2IvoBzW0nitMsusesAVnqqUaLqsajg9g=
