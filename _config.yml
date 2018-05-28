@@ -34,3 +34,4 @@ exclude:
   - assets/logo.sketch
   - Gemfile
   - Gemfile.lock
+  - vendor
