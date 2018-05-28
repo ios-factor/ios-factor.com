@@ -37,6 +37,8 @@ layout: page
     <div class="pager">
       {% if previousLink %}
         <a class="previous" href="{{previousLink}}">Previous</a>
+      {% else %}
+        <a class="previous" href="/">Home</a>
       {% endif %}
 
       {% if nextLink %}

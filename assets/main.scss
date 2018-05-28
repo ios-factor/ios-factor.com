@@ -27,15 +27,9 @@ $no-sidebar: "800px";
   display: none;
 }
 
-.all-factors {
-  background-color: #DDD;
-  padding: 20px;
-  margin: 0 -20px;
-}
-
 .pager {
   text-align: center; /* for the GitHub button */
-  height: 60px;
+  height: 30px;
 
   a {
     text-decoration: none;
@@ -63,27 +57,15 @@ $no-sidebar: "800px";
   }
 }
 
-.subscribe-form {
-  button {
-    display: inline-block;
-    width: 100px;
-    height: 30px;
-    background-color: #272727;
-    color: white;
-    font-style: normal;
-    font-size: 14px;
-    border: none;
-    cursor: pointer;
-    border-radius: 0;
-  }
-
-  input[type="text"] {
-    font-size: 14px;
-    padding: 5px;
-  }
-}
 .site-footer {
   background: #EEE;
+  margin-top: 5px;
+
+  .wrapper {
+    text-align: center;
+
+    color: #666;
+  }
 }
 
 h2.factor-long {
@@ -92,13 +74,6 @@ h2.factor-long {
 
 h3.factor-long {
   color: #555;
-}
-
-
-.subscribe-newsletter {
-  color: rgba(68, 68, 68, 0.7);
-  font-size: 13px;
-  line-height: 20px;
 }
 
 /* Hide sidebar on mobile devices */
@@ -175,6 +150,7 @@ blockquote {
 }
 
 .post-content {
+  padding-bottom: 0px;
   img {
     max-width: calc(100% - 10px);
   }
@@ -401,6 +377,7 @@ h1, h2, h3 {
 
 .page-content {
   padding-top: 40px;
+  padding-bottom: 0px;
 }
 
 code {
