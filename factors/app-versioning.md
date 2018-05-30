@@ -22,7 +22,7 @@ agvtool new-marketing-version 2.0
 agvtool next-version -all
 ```
 
-If you use the deployment tool _fastlane_ you can use [increment_version_number](https://docs.fastlane.tools/actions/increment_version_number/) and [increment_build_number](https://docs.fastlane.tools/actions/increment_build_number/) to automate the version bump as part of your deployment step
+If you use the deployment tool [fastlane](https://fastlane.tools) you can use [increment_version_number](https://docs.fastlane.tools/actions/increment_version_number/) and [increment_build_number](https://docs.fastlane.tools/actions/increment_build_number/) to automate the version bump as part of your deployment step
 
 Example `Fastfile`:
 

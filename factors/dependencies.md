@@ -3,9 +3,11 @@ layout: post
 permalink: dependencies
 ---
 
-**Ideally, an iOS-factor app never relies on the implicit existence of system-wide packages.** It declares all dependencies, completely and exactly via a dependency declaration manifest. This includes the exact versions of Xcode, CocoaPods and fastlane. 
+**Ideally, an iOS-factor app never relies on the implicit existence of system-wide packages.** It declares all dependencies, completely and exactly via a dependency declaration manifest. This includes the exact versions of [Xcode](https://developer.apple.com/xcode), [CocoaPods](https://cocoapods.org) and [fastlane](https://fastlane.tools). 
 
 The benefit of explicit dependency declaration is that it simplifies setup for developers new to the app, as well as having a reliable build system that is also able to run past builds again in a reproducible fashion. A new developer can check out the app’s codebase onto their development machine, requiring only the language runtime and dependency manager installed as prerequisites. They will be able to set up everything needed to run the app’s code with a deterministic build command.
+
+**By specifying the exact dependencies you can re-trigger a build from 6 months ago, knowing that it will succeed** as it will use the same version of Xcode, CocoaPods and Swift version. 
 
 Since iOS development cannot be containerized like it's already the case for web development, we're limited to third party tools trying to fulfill this requirement until Apple helps us out.
 
@@ -13,9 +15,9 @@ For the time being, you can use various third-party tooling to explicitly declar
 
 #### Swift-based tooling
 
-TODO
+Apple provides an excellent guide on the [Swift Package Manager](https://swift.org/package-manager).
 
-#### Xcode version
+#### Specifying an Xcode version
 
 You can use a [.xcode-version](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) file in the root of your iOS project to declare the exact version of Xcode to be used for a given iOS app.
 
@@ -31,7 +33,7 @@ Ruby uses [bundler](https://bundler.io) to define the exact dependencies to be u
 source "https://rubygems.org"
 
 gem "fastlane", ">= 2.96.1", "<= 3.0.0"
-gem "cocoapods", "=1.5"
+gem "cocoapods", "~> 1.5"
 ```
 
 To `Gemfile` and the automatically generated `Gemfile.lock` must be checked into version control. Any build system can then run `bundle install` to install all Ruby-based build dependencies.
