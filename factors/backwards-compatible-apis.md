@@ -14,18 +14,18 @@ https://your-api.com/1.0/drivers.json
 https://your-api.com/1.1/drivers.json
 ```
 
-You may eventually need to turn off or slightly change semantics of an API. Even if your company has a deep commitment to stability, sometimes matters of law force this change. This means you should encode an API endpoint that is queriable just to indicate the api status. 
+You may eventually need to turn off or slightly change semantics of an API. Even if your company has a deep commitment to stability, sometimes matters of law force this change. This means you should encode an API endpoint that is queriable just to indicate the API status. 
 
 ```
-https://your-api.com/1.0/killswitch.json
-https://your-api.com/1.1/killswitch.json
+https://your-api.com/1.0/status.json
+https://your-api.com/1.1/status.json
 ```
 
-This document should answer these questions: 
+The status API should include information such as
 
- - Is the API in production? In addition, you may specify information about it being a "testing/experimental/staging" API deployment
- - Is the API is depreciated? If so, what date is it scheduled to be turned off (if known)?
- - Is the API offline? If so, will it remain so?
+ - What's the stage of the API? (e.g. testing, beta, production)
+ - Is the API is depreciated? If so, what date is it scheduled to be turned off?
+ - Is the API offline? If so, will it remain so or is it a temporary outage?
 
 
  
