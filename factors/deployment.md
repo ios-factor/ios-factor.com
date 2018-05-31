@@ -13,7 +13,7 @@ In an ideal world, to release an app update you would
 - automatically install all dependencies (e.g. Xcode and [CocoaPods](https://cocoapods.org))
 - run the deployment script (e.g. [fastlane](https://fastlane.tools))
 
-Unfortunately, due to the fact that Xcode has to run on macOS, and macOS virtualization comes with technical as well as legal challenges, we can't use this approach ([rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712)).
+Unfortunately, due to the fact that Xcode has to run on macOS, and macOS virtualization comes with technical as well as legal challenges, we can't use this approach ([rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712)). One third party tool that makes it possible to have consistent macOS environments is [Veertu](https://veertu.com/).
 
 In recent years, disposable containers gained popularity for a variety of reasons:
 
