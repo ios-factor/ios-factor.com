@@ -3,7 +3,7 @@ layout: page
 title: iOS-factor
 ---
 
-iOS-factor was inspired by the famous [twelve-factor app framework](https://www.12factor.net/), a methodology to write high-quality web services. iOS-factor uses the same structure and similar principles, re-written and applied to iOS apps.
+iOS-factor was inspired by the famous [twelve-factor app framework](https://www.12factor.net/), a methodology to write high-quality web services. iOS-factor uses the same structure and similar principles, re-written and applied to the iOS app development processes.
 
 ## Background
 
@@ -21,13 +21,13 @@ Over the past 10 years, the iOS development process has shifted drastically:
 
 ## What's iOS-factor?
 
-iOS-factor is an experimental project started in May 2018. It aims to provide a collection of best practices for high-end iOS applications. Each topic is covered by a `factor`, which describes an ideal state of how a certain category of the iOS app development process could look like. 
+iOS-factor is an experimental project started in May 2018. It aims to provide a collection of best practices for building high-end iOS applications. Each topic is covered by a `factor`, which describes an ideal state of how a certain category of the iOS app development process could look like. 
 
 Due to certain limitations (like Xcode running only on macOS) not all requirements can be fulfilled. This project aims to define goals, as well as the best current approaches to solve some of the challenges we're facing.
 
-iOS-factor covers the bigger-picture iOS app development processes and architecture decisions and will not cover any language specific challenges.
+iOS-factor is all about the bigger-picture iOS app development processes and architecture decisions and will not cover any language specific challenges.
 
-This is a living project, maintained by the iOS developer community. You can find the full source on [GitHub](https://github.com/ios-factor/ios-factor.com) and update existing pages or add new factors.
+This is a living project, maintained by the iOS developer community. You can find the full source on [GitHub](https://github.com/ios-factor/ios-factor.com#readme) and update existing pages or add new factors.
 
 -----
 
