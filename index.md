@@ -3,7 +3,7 @@ layout: page
 title: iOS-factor
 ---
 
-iOS-factor was inspired by the famous [twelve-factor app framework](https://www.12factor.net/), a methodology to write high-quality web services. iOS-factor uses the same structure and similar principals, re-written and applied to iOS apps.
+iOS-factor was inspired by the famous [twelve-factor app framework](https://www.12factor.net/), a methodology to write high-quality web services. iOS-factor uses the same structure and similar principles, re-written and applied to iOS apps.
 
 ## Background
 
@@ -27,7 +27,7 @@ Due to certain limitations (like Xcode running only on macOS) not all requiremen
 
 iOS-factor covers the bigger-picture iOS app development processes and architecture decisions and will not cover any language specific challenges.
 
-This is a living project, maintained by the community. You can find the full source on [GitHub](https://github.com/ios-factor/ios-factor.com) and update existing pages or add new factors.
+This is a living project, maintained by the iOS developer community. You can find the full source on [GitHub](https://github.com/ios-factor/ios-factor.com) and update existing pages or add new factors.
 
 -----
 

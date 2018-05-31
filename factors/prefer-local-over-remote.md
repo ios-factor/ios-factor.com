@@ -9,7 +9,7 @@ In the recent years, some development teams started using approaches that requir
 
 - Privacy: avoid sending data to a remote server
 - Speed: Sending data to a server and waiting for a response requires time and might fail (e.g. spotty WiFi)
-- Data usage: users foten have monthly data limits
+- Data usage: users often have monthly data limits
 - Scaling: If your app goes viral, you are responsible to scale the backend services up
 
 Most iOS app require some kind of backend for certain tasks, like authentication, more complex calculations or storing of content.
