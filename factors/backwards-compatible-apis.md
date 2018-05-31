@@ -13,3 +13,17 @@ The basic concept is that you don't update an existing API, but add a new one in
 https://your-api.com/1.0/drivers.json
 https://your-api.com/1.1/drivers.json
 ```
+
+You may eventually need to turn off or slightly change semantics of an API. Even if your company has a deep commitment to stability, sometimes matters of law force this change. This means you should encode an API endpoint that is queriable just to indicate the api status. 
+
+https://your-api.com/1.0/killswitch.json
+https://your-api.com/1.1/killswitch.json
+
+This document should encode
+
+Is the API in pre-production? (You may optionally contain information about it being a "testing/experimental/staging" api).   
+Is the API in production?   
+Is the API depreciated, and if so when will it be turned off (if known)?   
+Is the API offline? If so, will it remain so?   
+
+The killswitch API 
