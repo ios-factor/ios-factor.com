@@ -9,7 +9,7 @@ The benefit of explicit dependency declaration is that it simplifies setup for d
 
 **By specifying the exact dependencies you can re-trigger a build from 6 months ago, knowing that it will succeed** as it will use the same version of Xcode, CocoaPods and Swift version. 
 
-Since iOS development cannot be containerized like it's already the case for web development, we're limited to third party tools trying to fulfill this requirement until Apple helps us out.
+Since iOS development cannot be containerized like it's already the case for web development, we're limited to third party tools trying to fulfill this requirement until Apple provides an official solution ([rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712)).
 
 For the time being, you can use various third-party tooling to explicitly declare those dependencies.
 
@@ -23,7 +23,7 @@ You can use a [.xcode-version](https://github.com/fastlane/ci/blob/master/docs/x
 
 This way, you can configure your CI-system to automatically install and use a given Xcode version. 
 
-To automate the installation of Xcode, you can use the third party tool [xcode-install](https://github.com/krausefx/xcode-install).
+To automate the installation of Xcode, you can use the third party tool [xcode-install](https://github.com/krausefx/xcode-install) until Apple provides a command line tool to install Xcode ([rdar://40669425](https://openradar.appspot.com/radar?id=5064112975380480)).
 
 #### Ruby-based tooling
 
