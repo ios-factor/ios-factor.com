@@ -1,6 +1,7 @@
 ---
 layout: post
 permalink: deployment
+title: Deployment
 ---
 
 As described in the [Dependencies](/dependencies) factor, the code repository should include all dependencies needed to build, test and release the iOS app.

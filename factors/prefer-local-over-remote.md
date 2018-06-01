@@ -1,6 +1,7 @@
 ---
 layout: post
 permalink: prefer-local-over-remote
+title: Prefer Local Over Remote
 ---
 
 In the recent years, some development teams started using approaches that require less development work, on the expense of the user's app experience by moving more logic to a remote backend and having the iOS app be a thin client showing the server results. This approach results in user frustration when the app is used in a situation with a less than perfect internet connection (like in a subway, elevator or a spotty WiFi).

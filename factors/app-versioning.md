@@ -1,6 +1,7 @@
 ---
 layout: post
 permalink: app-versioning
+title: App Versioning
 ---
 
 **Version and the build numbers work together to uniquely identify a particular App Store submission for an app:**
