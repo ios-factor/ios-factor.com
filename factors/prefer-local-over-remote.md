@@ -11,8 +11,8 @@ In the recent years, some development teams started using approaches that requir
 - Speed: Sending data to a server and waiting for a response requires time and might fail (e.g. spotty WiFi)
 - Data usage: users often have monthly data limits
 - Scaling: If your app goes viral, you are responsible to scale the backend services up
-- Battery life: Using the antenna is costly for battery life.
-- Reliability: Some countries still have unreliable LTE/3G connections.
+- Battery life: Using mobile data is costly for battery life
+- Reliability: Some countries still have unreliable LTE/3G connections
 
 Most iOS app require some kind of backend for certain tasks, like authentication, more complex calculations or storing of content.
 
