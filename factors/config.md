@@ -16,7 +16,7 @@ A litmus test for whether an app has all config correctly factored out of the co
 There are many ways on how you can inject config values during build time
 
 - Configuration files (e.g. JSON or YAML files)
-- [cocoapods-keys](https://github.com/orta/cocoapods-keys) to securely apply secret keys to your iOS app during build time
+- [cocoapods-keys](https://github.com/orta/cocoapods-keys) to better hide keys and apply them to your iOS app during build time
 - Custom built solution (e.g. using a build phase)
 
 As deployments on the iOS platform are significantly slower than server deployments, you might want a way to quickly update config over the air (OTA) to react to issues fast. 
