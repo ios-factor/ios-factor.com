@@ -1,6 +1,7 @@
 ---
 layout: post
 permalink: config
+title: Config
 ---
 
 An app’s config is everything that is likely to change between deploys (App Store, TestFlight, local development) or over time without the underlying code changing. This includes:

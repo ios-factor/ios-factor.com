@@ -1,6 +1,7 @@
 ---
 layout: post
 permalink: dependencies
+title: Dependencies
 ---
 
 **Ideally, an iOS-factor app never relies on the implicit existence of system-wide packages.** It declares all dependencies, completely and exactly via a dependency declaration manifest. This includes the exact versions of [Xcode](https://developer.apple.com/xcode), [CocoaPods](https://cocoapods.org) and [fastlane](https://fastlane.tools). 

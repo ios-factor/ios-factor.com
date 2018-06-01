@@ -1,6 +1,7 @@
 ---
 layout: post
 permalink: dev-prod-parity
+title: Dev/Prod Parity
 ---
 
 Historically, there has been substantial gaps between development (a developer making live edits to the app on their local machine) and production (an app deployed on the App Store accessed by end users). These gaps manifest in three areas:

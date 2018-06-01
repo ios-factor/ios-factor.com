@@ -1,6 +1,7 @@
 ---
 layout: post
 permalink: persistence-of-data
+title: Persistence of Data
 ---
 
 Storing data and configuration according to Apple's guideline is crucial for your app's lifecycle, in particular when it comes to iCloud sync, upgrading to a new phone and restoring a phone from a backup.
