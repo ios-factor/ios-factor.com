@@ -25,7 +25,7 @@ https://your-api.com/1.1/status.json
 The status API should include information such as
 
  - What's the stage of the API? (e.g. testing, beta, production)
- - Is the API is depreciated? If so, what date is it scheduled to be turned off?
+ - Is the API deprecated? If so, what date is it scheduled to be turned off?
  - Is the API offline? If so, will it remain so or is it a temporary outage?
 
 
