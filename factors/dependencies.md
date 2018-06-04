@@ -59,3 +59,24 @@ JavaScript based iOS apps (e.g. React Native) make use of a `package.json` file 
 ```
 
 The `package.json` should be checked into version control for reproducible builds.
+
+#### Python-based tooling
+
+Python has some tools to be used in iOS project. Also, scripting with this language is a great way to make consistent checkages in your project, as a build phase (before compilation).
+
+The dependencies (installed with [pip](https://pypi.org/project/pip/)) and the Python version used inside a [virtualenv](https://virtualenv.pypa.io/) can be managed with [pipenv](https://github.com/pypa/pipenv). The installation of the tool is easy with homebrew and the main structure it uses is the `Pipfile`:
+
+```
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+xunique = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "2.7"
+```
