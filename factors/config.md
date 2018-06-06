@@ -14,7 +14,7 @@ Apps sometimes store config as constants in the code. This is a violation of iOS
 
 A litmus test for whether an app has all config correctly factored out of the code is whether the codebase could be made open source at any moment, without compromising any credentials.
 
-There are many ways on how you can inject config values during build time
+There are many ways you can inject config values during build time
 
 - Configuration files (e.g. JSON or YAML files)
 - [cocoapods-keys](https://github.com/orta/cocoapods-keys) to better hide keys and apply them to your iOS app during build time
