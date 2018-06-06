@@ -20,7 +20,12 @@ There are many ways on how you can inject config values during build time
 - [cocoapods-keys](https://github.com/orta/cocoapods-keys) to better hide keys and apply them to your iOS app during build time
 - Custom built solution (e.g. using a build phase)
 
-As deployments on the iOS platform are significantly slower than server deployments, you might want a way to quickly update config over the air (OTA) to react to issues fast. 
+There are also techniques for providing config values at run time:
+
+- Linking into the app with a custom url scheme
+- Using a shared keychain and a separate app for configuration
+
+As deployments on the iOS platform are significantly slower than server deployments, you might want a way to quickly update config over the air (OTA) to react to issues fast.
 
 OTA config updates are powerful and allow you to instantly
 
