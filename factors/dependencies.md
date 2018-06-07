@@ -22,9 +22,11 @@ Apple provides an excellent guide on the [Swift Package Manager](https://swift.o
 
 You can use a [.xcode-version](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) file in the root of your iOS project to declare the exact version of Xcode to be used for a given iOS app.
 
-This way, you can configure your CI-system to automatically install and use a given Xcode version. 
+This way, you can configure your CI-system to automatically install and use a given Xcode version. You can also install [chxcode] to automatically switch Xcode versions.
 
 To automate the installation of Xcode, you can use the third party tool [xcode-install](https://github.com/krausefx/xcode-install) until Apple provides a command line tool to install Xcode ([rdar://40669425](https://openradar.appspot.com/radar?id=5064112975380480)).
+
+[chxcode]: https://github.com/klaaspieter/chxcode
 
 #### Ruby-based tooling
 
