@@ -29,6 +29,8 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.9.3)
       jekyll (~> 3.3)
+    jekyll-multiple-languages-plugin (1.5.1)
+      jekyll (>= 2.0, < 4.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
     jekyll-seo-tag (2.5.0)
@@ -66,7 +68,8 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (>= 3.8.2, < 4.0.0)
+  jekyll-multiple-languages-plugin
   minima (~> 2.0)
 
 BUNDLED WITH
-   1.14.6
+   1.16.2

@@ -1,14 +1,12 @@
 <footer class="site-footer">
   <div class="wrapper">
-    Fully open source on <a href="https://github.com/ios-factor/ios-factor.com">GitHub</a>
-
-    <br />
-
-    Project started by <a href="https://twitter.com/KrauseFx">Felix Krause</a>
-
-    <br />
-
-    This project is in no way affiliated with Apple
+    {{ site.languageNames[site.lang] }}
+    {% for lang in site.languageNames %}
+      {% if lang[0] == site.lang %} {% continue %} {% endif %}
+       | 
+      <a href="{{ site.baseurl_root }}{% if lang[0] != site.language_default %}/{{ lang[0] }}{% endif %}/">{{ lang[1] }}</a>
+    {% endfor %} <br/>
+    {% tf footer.html %}
   </div>
 </footer>
 
@@ -17,6 +15,6 @@
   for (var i = 0, linksLength = links.length; i < linksLength; i++) {
     if (links[i].hostname != window.location.hostname) {
       links[i].target = '_blank';
-    } 
+    }
   }
 </script>
