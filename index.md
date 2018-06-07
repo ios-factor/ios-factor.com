@@ -1,6 +1,6 @@
 ---
 layout: page
-title: iOS-factor
+title: Home
 ---
 
 {% tf index.md %}
