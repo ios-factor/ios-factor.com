@@ -1,4 +1,4 @@
-**Ideally, an iOS-factor app never relies on the implicit existence of system-wide packages.** It declares all dependencies, completely and exactly via a dependency declaration manifest. This includes the exact versions of [Xcode](https://developer.apple.com/xcode), [CocoaPods](https://cocoapods.org) and [fastlane](https://fastlane.tools). 
+**Ideally, an iOS-factor app never relies on the implicit existence of system-wide packages.** It declares all dependencies, completely and exactly via a dependency declaration manifest. This includes the exact versions of [Xcode](https://developer.apple.com/xcode), [CocoaPods](https://cocoapods.org) and [fastlane](https://fastlane.tools).
 
 The benefit of explicit dependency declaration is that it simplifies setup for developers new to the app, as well as having a reliable build system that is also able to run past builds again in a reproducible fashion. A new developer can check out the app’s codebase onto their development machine, requiring only the language runtime and dependency manager installed as prerequisites. They will be able to set up everything needed to run the app’s code with a deterministic build command.
 
@@ -16,7 +16,7 @@ Apple provides an excellent guide on the [Swift Package Manager](https://swift.o
 
 You can use a [.xcode-version](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) file in the root of your iOS project to declare the exact version of Xcode to be used for a given iOS app.
 
-This way, you can configure your CI-system to automatically install and use a given Xcode version.
+This way, you can configure your CI-system to automatically install and use a given Xcode version. To switch the Xcode version (assuming you already have it installed), you can use a tool like [chxcode](https://github.com/klaaspieter/chxcode).
 
 To automate the installation of Xcode, you can use the third party tool [xcode-install](https://github.com/krausefx/xcode-install) until Apple provides a command line tool to install Xcode ([rdar://40669425](https://openradar.appspot.com/radar?id=5064112975380480)).
 
