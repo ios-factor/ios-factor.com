@@ -38,9 +38,10 @@ gems:
   - jekyll-multiple-languages-plugin
 
 # Multi Languages
-languages: ["en", "ko"]
+languages: ["en", "ko", "pt_BR"]
 exclude_from_localizations: ["javascript", "images", "css"]
 language_default: "en"
 languageNames:
   en: English
   ko: Korean
+  pt_BR: Brazilian Portuguese

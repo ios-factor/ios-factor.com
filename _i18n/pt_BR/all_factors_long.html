@@ -1,0 +1,11 @@
+<div class="all-factors">
+  <h1>Os fatores iOS</h1>
+  {% for factor in site.data.factors %}
+    <h2 class="factor-long">
+      <a href="{{ factor.link }}">
+        {{ factor.index }}. {{ factor.pt_BR.title }}
+      </a>
+    </h2>
+    <h3 class="factor-long">{{ factor.pt_BR.subtitle }}</h3>
+  {% endfor %}
+</div>
