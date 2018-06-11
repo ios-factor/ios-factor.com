@@ -1,32 +1,64 @@
-- title: Dependencies
-  subtitle: Explicitly declare and isolate dependencies
+- en:
+    title: Dependencies
+    subtitle: Explicitly declare and isolate dependencies
+  ko:
+    title: 디펜던시(Dependencies)
+    subtitle: 선언은 명시적으로, 디펜던시는 고립시키세요.
   link: dependencies
   index: "I"
-- title: Config
-  subtitle: No configuration in code, ship with default config & allow OTA updates
+- en:
+    title: Config
+    subtitle: No configuration in code, ship with default config & allow OTA updates
+  ko:
+    title: 설정(Config)
+    subtitle: 코드에선 설정을 하지마세요. 디폴트 설정을 정해두고, OTA 업데이트를 허용하세요.
   link: config
   index: "II"
-- title: Dev/prod parity
-  subtitle: Keep development, testing and production as similar as possible
+- en:
+    title: Dev/prod parity
+    subtitle: Keep development, testing and production as similar as possible
+  ko:
+    title: 개발/라이브 동일시하기(Dev/prod parity)
+    subtitle: 개발 버전과 테스트 버전, 그리고 라이브 버전을 가능한한 똑같이 만드세요.
   link: dev-prod-parity
   index: "III"
-- title: Deployment
-  subtitle: Automate your deployment so you can release from any machine
+- en:
+    title: Deployment
+    subtitle: Automate your deployment so you can release from any machine
+  ko:
+    title: 배포(Deployment)
+    subtitle: 배포를 자동화해서 아무 기기에서나 릴리즈할 수 있도록 하세요.
   link: deployment
   index: "IV"
-- title: Prefer local over remote
-  subtitle: Keep the iOS app smart enough to operate without a backend where possible
+- en:
+    title: Prefer local over remote
+    subtitle: Keep the iOS app smart enough to operate without a backend where possible
+  ko:
+    title: 원격보다 로컬 선호하기(Prefer local over remote)
+    subtitle: 가능하다면 iOS 앱을 백엔드 없이도 잘 작동하는 똑똑한 앱으로 만드세요.
   link: prefer-local-over-remote
   index: "V"
-- title: Backwards compatible APIs
-  subtitle: Don't assume every user updates to the latest version
+- en:
+    title: Backwards compatible APIs
+    subtitle: Don't assume every user updates to the latest version
+  ko:
+    title: 이전 버전과 호환되는 API(Backwards compatible APIs)
+    subtitle: 모든 유저가 최신 버전을 사용한다고 가정하지 마세요.
   link: backwards-compatible-apis
   index: "VI"
-- title: App versioning
-  subtitle: Automate your app's build & version numbers for consistency
+- en:
+    title: App versioning
+    subtitle: Automate your app's build & version numbers for consistency
+  ko:
+    title: 앱 버전 정하기(App versioning)
+    subtitle: 일관성을 유지하기 위해 앱의 빌드와 버전 넘버를 자동화하세요.
   link: app-versioning
   index: "VII"
-- title: Persistence of data
-  subtitle: Follow the Apple guidelines when storing data
+- en:
+    title: Persistence of data
+    subtitle: Follow the Apple guidelines when storing data
+  ko:
+    title: 데이터의 지속성(Persistence of data)
+    subtitle: 데이터를 저장할 때는 Apple의 가이드라인을 지키세요.
   link: persistence-of-data
   index: "VIII"

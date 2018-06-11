@@ -1,18 +1,1 @@
-<ul>
-
-{% for factor in site.data.factors %}
-  <li style="list-style-type: none;">
-    {% assign currentFactorURL = "/" | append: factor.link %}
-    {% if currentFactorURL == page.url %}
-      <b class="selected-factor">
-        {{factor.index}}. {{ factor.title }}
-      </b>
-    {% else %}
-      <a href="{{factor.link}}">
-        {{factor.index}}. {{ factor.title }}
-      </a>
-    {% endif %}
-  </li>
-{% endfor %}
-
-<ul>
+{% tf all_factors_short.html %}

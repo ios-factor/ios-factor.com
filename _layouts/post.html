@@ -1,21 +1,8 @@
 ---
 layout: page
 ---
-{% for factor in site.data.factors %}
-  {% assign currentFactorURL = "/" | append: factor.link %}
-  {% if currentFactorURL == page.url %}
-    {% assign title = factor.title %}
-    {% assign subtitle = factor.subtitle %}
-    {% assign index = factor.index %}
 
-    {% assign nextLink = site.data.factors[forloop.index].link %}
-
-    {% assign previousIndex = forloop.index | minus: 2 %}
-    {% if previousIndex >= 0 %}
-      {% assign previousLink = site.data.factors[previousIndex].link %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
+{% tf post.html %}
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
@@ -34,18 +21,6 @@ layout: page
     {{ content }}
 
     <hr />
-    <div class="pager">
-      {% if previousLink %}
-        <a class="previous" href="{{previousLink}}">Previous</a>
-      {% else %}
-        <a class="previous" href="/">Home</a>
-      {% endif %}
-
-      {% if nextLink %}
-        <a class="next" href="{{nextLink}}">Next</a>
-      {% else %}
-        <a class="next" href="https://github.com/ios-factor/ios-factor.com">Contribute your own</a>
-      {% endif %}
-    </div>
+    {% include pagination.html %}
   </div>
 </article>

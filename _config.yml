@@ -15,8 +15,6 @@
 # in the templates via {{ site.myvariable }}.
 title: iOS-factor
 email: ios-factor@krausefx.com
-description: >- # this means to ignore newlines until "baseurl:"
-  A methodology for building high-quality iOS applications
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ios-factor.com" # the base hostname & protocol for your site, e.g. http://example.com
 google_analytics: UA-18658848-15
@@ -35,3 +33,14 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+
+gems:
+  - jekyll-multiple-languages-plugin
+
+# Multi Languages
+languages: ["en", "ko"]
+exclude_from_localizations: ["javascript", "images", "css"]
+language_default: "en"
+languageNames:
+  en: English
+  ko: Korean

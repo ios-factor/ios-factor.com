@@ -1,0 +1,13 @@
+<div class="pager">
+  {% if previousLink %}
+    <a class="previous" href="{{previousLink}}">이전 페이지</a>
+  {% else %}
+    <a class="previous" href="/">홈으로</a>
+  {% endif %}
+
+  {% if nextLink %}
+    <a class="next" href="{{nextLink}}">다음 페이지</a>
+  {% else %}
+    <a class="next" href="https://github.com/ios-factor/ios-factor.com">프로젝트에 기여하기</a>
+  {% endif %}
+</div>
