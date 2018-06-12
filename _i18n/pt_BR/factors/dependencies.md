@@ -1,6 +1,6 @@
-**Idealmente, uma app fator-iOS nunca depende da existência implícita de pacotes a nível de sistema**. Ela declara todas dependências, completamente e exatamente através de um manifesto de declaração de dependências. Isso inclui as versões exatas do [Xcode](https://developer.apple.com/xcode), [CocoaPods](https://cocoapods.org) e [fastlane](https://fastlane.tools).
+**Idealmente, uma app iOS-factor nunca depende da existência implícita de pacotes a nível de sistema**. Ela declara todas dependências, completamente e exatamente através de um manifesto de declaração de dependências. Isso inclui as versões exatas do [Xcode](https://developer.apple.com/xcode), [CocoaPods](https://cocoapods.org) e [fastlane](https://fastlane.tools).
 
-O benefício da declaração explícita de dependências é que isso simplifica a configuração inicial do app para novos desenvolvedores, assim como ajuda a ter um sistema de build confiável que também é capaz de executar builds antigos novamente de uma forma reproduzível. Um novo desenvolvedor pode baixar o código fonte da app na sua máquina, tendo somente o _runtime_ da linguagem e o gerenciador de dependências instalados como os únicos pré requisitos.
+O benefício da declaração explícita de dependências é que isso simplifica a configuração inicial do app para novos desenvolvedores, assim como ajuda a ter um sistema de build confiável que também é capaz de executar builds antigos novamente de uma forma que seja reproduzível. Um novo desenvolvedor pode baixar o código fonte da app na sua máquina, tendo somente o _runtime_ da linguagem e o gerenciador de dependências instalados como os únicos pré-requisitos.
 
 **Ao especificar as dependências exatas, você consegue regerar um build de 6 meses atrás, sabendo que vai dar certo** dado que vai usar a mesma versão do Xcode, CocoaPods e do Swift.
 
@@ -31,11 +31,11 @@ gem "fastlane", ">= 2.96.1", "<= 3.0.0"
 gem "cocoapods", "~> 1.5"
 ```
 
-O `Gemfile` e o automaticamente gerado `Gemfile.lock` devem ser versionados na sua ferramenta de controle de versão. Qualquer sistema de build pode então rodar `bundle install` para instalar as dependências em Ruby.
+O `Gemfile` e o automaticamente gerado `Gemfile.lock` devem ser versionados na sua ferramenta de controle de versão. Qualquer sistema de build pode então ser capaz de rodar `bundle install` e instalar as dependências em Ruby.
 
 #### Ferramentas para JavaScript
 
-Apps iOS feitas em JavaScipt (ex: React Native) fazem uso de um arquivo `package.json` que define todas as dependências necessárias.
+Apps iOS feitas em JavaScipt (ex: React Native) fazem uso de um arquivo chamado `package.json` que define todas as dependências necessárias.
 
 ```json
 {

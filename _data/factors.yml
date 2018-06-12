@@ -28,7 +28,7 @@
     subtitle: 개발 버전과 테스트 버전, 그리고 라이브 버전을 가능한한 똑같이 만드세요.
   pt_BR:
     title: Paridade de ambientes de desenvolvimento/produção
-    subtitle: Mantenha os ambientes de desenvolvimento, teste e produção o mais similar possível
+    subtitle: Mantenha os ambientes de desenvolvimento, teste e produção o mais similar possíveis
   link: dev-prod-parity
   index: "III"
 - en:
@@ -39,7 +39,7 @@
     subtitle: 배포를 자동화해서 아무 기기에서나 릴리즈할 수 있도록 하세요.
   pt_BR:
     title: Deployment
-    subtitle: Automatize seu processo de deployment para que possa liberar uma nova versão de qualquer máquina
+    subtitle: Automatize seu processo de deploy para que possa liberar uma nova versão a partir de qualquer máquina
   link: deployment
   index: "IV"
 - en:
@@ -61,7 +61,7 @@
     subtitle: 모든 유저가 최신 버전을 사용한다고 가정하지 마세요.
   pt_BR:
     title: APIs com compatibilidade retroativa
-    subtitle: Não assuma que todo usuário atualiza para a versão mais recente
+    subtitle: Não assuma que todo usuário irá sempre atualizar para a versão mais recente de sua app
   link: backwards-compatible-apis
   index: "VI"
 - en:
@@ -83,6 +83,6 @@
     subtitle: 데이터를 저장할 때는 Apple의 가이드라인을 지키세요.
   pt_BR:
     title: Persistência de dados
-    subtitle: Siga as instruções da Apple quando estiver salvando dados
+    subtitle: Siga as instruções da Apple quando estiver armazenando dados
   link: persistence-of-data
   index: "VIII"

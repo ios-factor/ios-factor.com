@@ -13,13 +13,13 @@ Após já ter habilitado o Sistema de Versionamento (ou `Versioning System`) no 
 # Atualizar o número da versão (CFBundleShortVersionString)
 agvtool new-marketing-version 2.0
 
-# Atualizar o número do build (CFBundleVersion) to the next one
+# Atualizar o número do build (CFBundleVersion) para o próximo
 agvtool next-version -all
 ```
 
-Se você usa a ferramenta de deployment [fastlane](https://fastlane.tools), você pode usar as instruções [increment_version_number](https://docs.fastlane.tools/actions/increment_version_number/) e [increment_build_number](https://docs.fastlane.tools/actions/increment_build_number/) para automatizar o passo de incremento de versão do seu processo de deployment.
+Se você usa a ferramenta de deploy [fastlane](https://fastlane.tools), você pode usar as instruções [increment_version_number](https://docs.fastlane.tools/actions/increment_version_number/) e [increment_build_number](https://docs.fastlane.tools/actions/increment_build_number/) para automatizar o passo de incremento de versão do seu processo de deploy.
 
-Examplo de `Fastfile`:
+Exemplo de `Fastfile`:
 
 ```ruby
 lane :beta do
