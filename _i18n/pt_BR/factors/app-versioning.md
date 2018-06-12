@@ -1,25 +1,25 @@
-**Version and the build numbers work together to uniquely identify a particular App Store submission for an app:**
+**Os números de versão e de build trabalham juntos para unicamente identificar um envio de uma app para a App Store**
 
-- Version number (`CFBundleShortVersionString`) - shown as `Version` in Xcode, also called the marketing version: The version that's visible to the end-user, it has to be incremented on each public App Store release
-- Build number (`CFBundleVersion`) - shown as `Build` in Xcode: an incrementing number
+- Número da versão (`CFBundleShortVersionString`) - mostrado como `Version` no Xcode, também chamado de versão de mercado (ou _marketing version_): A versão que é visível para o usuário final, precisa ser incrementada a cada lançamento público na App Store
+- Número do build (`CFBundleVersion`) - mostrado como `Build` no Xcode: um número incremental
 
-In today's iOS development processes there is no reason you should manually change those numbers. Instead, you want a reliable and automated system taking care of keeping the versions up to date.
+Nos processos atuais de desenvolvimento para iOS, não existe motivo para que você altere esses números manualmente. Ao invés disso, você quer um sistema confiável e automatizado que seja responsável por manter esses números de versão atualizados.
 
-There is no need to use third-party tools, Xcode has a tool called `agvtool` built-in. ([more details](https://developer.apple.com/library/content/qa/qa1827/_index.html))
+Não existe necessidade para usar ferramentas de terceiros. O Xcode tem uma ferramenta chamada `agvtool` já embutida. ([mais detalhes](https://developer.apple.com/library/content/qa/qa1827/_index.html))
 
-After initially enabling the `Versioning System` for your Xcode project, you can use the following commands:
+Após já ter habilitado o Sistema de Versionamento (ou `Versioning System`) no seu projeto do Xcode, você pode usar os seguintes comandos:
 
 ```sh
-# Update the version number (CFBundleShortVersionString)
+# Atualizar o número da versão (CFBundleShortVersionString)
 agvtool new-marketing-version 2.0
 
-# Update the build number (CFBundleVersion) to the next one
+# Atualizar o número do build (CFBundleVersion) to the next one
 agvtool next-version -all
 ```
 
-If you use the deployment tool [fastlane](https://fastlane.tools) you can use [increment_version_number](https://docs.fastlane.tools/actions/increment_version_number/) and [increment_build_number](https://docs.fastlane.tools/actions/increment_build_number/) to automate the version bump as part of your deployment step
+Se você usa a ferramenta de deployment [fastlane](https://fastlane.tools), você pode usar as instruções [increment_version_number](https://docs.fastlane.tools/actions/increment_version_number/) e [increment_build_number](https://docs.fastlane.tools/actions/increment_build_number/) para automatizar o passo de incremento de versão do seu processo de deployment.
 
-Example `Fastfile`:
+Examplo de `Fastfile`:
 
 ```ruby
 lane :beta do
