@@ -1,28 +1,28 @@
-**Ideally, an iOS-factor app never relies on the implicit existence of system-wide packages.** It declares all dependencies, completely and exactly via a dependency declaration manifest. This includes the exact versions of [Xcode](https://developer.apple.com/xcode), [CocoaPods](https://cocoapods.org) and [fastlane](https://fastlane.tools).
+**Idealmente, uma app fator-iOS nunca depende da existência implícita de pacotes a nível de sistema**. Ela declara todas dependências, completamente e exatamente através de um manifesto de declaração de dependências. Isso inclui as versões exatas do [Xcode](https://developer.apple.com/xcode), [CocoaPods](https://cocoapods.org) e [fastlane](https://fastlane.tools).
 
-The benefit of explicit dependency declaration is that it simplifies setup for developers new to the app, as well as having a reliable build system that is also able to run past builds again in a reproducible fashion. A new developer can check out the app’s codebase onto their development machine, requiring only the language runtime and dependency manager installed as prerequisites. They will be able to set up everything needed to run the app’s code with a deterministic build command.
+O benefício da declaração explícita de dependências é que isso simplifica a configuração inicial do app para novos desenvolvedores, assim como ajuda a ter um sistema de build confiável que também é capaz de executar builds antigos novamente de uma forma reproduzível. Um novo desenvolvedor pode baixar o código fonte da app na sua máquina, tendo somente o _runtime_ da linguagem e o gerenciador de dependências instalados como os únicos pré requisitos.
 
-**By specifying the exact dependencies you can re-trigger a build from 6 months ago, knowing that it will succeed** as it will use the same version of Xcode, CocoaPods and Swift version.
+**Ao especificar as dependências exatas, você consegue regerar um build de 6 meses atrás, sabendo que vai dar certo** dado que vai usar a mesma versão do Xcode, CocoaPods e do Swift.
 
-Since iOS development cannot be containerized like it's already the case for web development, we're limited to third party tools trying to fulfill this requirement until Apple provides an official solution ([rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712)).
+Dado que o desenvolvimento pra iOS não consegue ser tão encapsulável como é o caso do desenvolvimento para web, estamos limitados à ferramentas de terceiros pra preencher essa necessidade enquanto a Apple não disponibiliza uma solução oficial ([rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712)).
 
-For the time being, you can use various third-party tooling to explicitly declare those dependencies.
+Por enquanto, você pode usar variadas ferramentas de terceiros pra declarar explicitamente essas dependências.
 
-#### Swift-based tooling
+#### Ferramentas para Swift
 
-Apple provides an excellent guide on the [Swift Package Manager](https://swift.org/package-manager).
+A Apple fornece um guia excelente sobre o [Swift Package Manager](https://swift.org/package-manager).
 
-#### Specifying an Xcode version
+#### Especificando uma versão do Xcode
 
-You can use a [.xcode-version](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) file in the root of your iOS project to declare the exact version of Xcode to be used for a given iOS app.
+Você pode usar um arquivo [.xcode-version](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) na raiz do seu projeto iOS para declarar a versão exata do Xcode a ser usada para uma dada app iOS.
 
-This way, you can configure your CI-system to automatically install and use a given Xcode version. To switch the Xcode version (assuming you already have it installed), you can use a tool like [chxcode](https://github.com/klaaspieter/chxcode).
+Dessa forma, você pode configurar seu sistema de integração contínua para instalar automaticamente e usar uma determinada versão do Xcode. Para trocar a versão do Xcode (assumindo que você já o tem instalado), você pode usar uma ferramenta como o [chxcode](https://github.com/klaaspieter/chxcode).
 
-To automate the installation of Xcode, you can use the third party tool [xcode-install](https://github.com/krausefx/xcode-install) until Apple provides a command line tool to install Xcode ([rdar://40669425](https://openradar.appspot.com/radar?id=5064112975380480)).
+Para automatizar a versão do Xcode, você pode usar uma ferramenta chamada [xcode-install](https://github.com/krausefx/xcode-install) até a Apple fornecer uma ferramenta de linha de comando para instalar o Xcode ([rdar://40669425](https://openradar.appspot.com/radar?id=5064112975380480)).
 
-#### Ruby-based tooling
+#### Ferramentas para Ruby
 
-Ruby uses [bundler](https://bundler.io) to define the exact dependencies to be used for a build in a so-called `Gemfile`:
+Ruby usa o [bundler](https://bundler.io) para definir as dependências exatas a serem usadas em um build através de um arquivo chamado `Gemfile`:
 
 ```ruby
 source "https://rubygems.org"
@@ -31,11 +31,11 @@ gem "fastlane", ">= 2.96.1", "<= 3.0.0"
 gem "cocoapods", "~> 1.5"
 ```
 
-The `Gemfile` and the automatically generated `Gemfile.lock` must be checked into version control. Any build system can then run `bundle install` to install all Ruby-based build dependencies.
+O `Gemfile` e o automaticamente gerado `Gemfile.lock` devem ser versionados na sua ferramenta de controle de versão. Qualquer sistema de build pode então rodar `bundle install` para instalar as dependências em Ruby.
 
-#### JavaScript-based tooling
+#### Ferramentas para JavaScript
 
-JavaScript based iOS apps (e.g. React Native) make use of a `package.json` file that defines all dependencies needed.
+Apps iOS feitas em JavaScipt (ex: React Native) fazem uso de um arquivo `package.json` que define todas as dependências necessárias.
 
 ```json
 {
@@ -52,4 +52,4 @@ JavaScript based iOS apps (e.g. React Native) make use of a `package.json` file 
 }
 ```
 
-The `package.json` should be checked into version control for reproducible builds.
+O `package.json` deve ser versionado para que se tenha builds reproduzíveis.
