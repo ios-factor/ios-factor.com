@@ -1,28 +1,30 @@
-As described in the [Dependencies](/dependencies) factor, the code repository should include all dependencies needed to build, test and release the iOS app.
+Como descrito no fator [Dependências](/dependencies), o repositório do código deve incluir todas as dependências que são necessárias para fazer o build, testar e submeter a app iOS.
 
-As soon as your app fulfills that requirement, you can release new app updates from **any** macOS based machine.
+Assim que sua app preencher esse requisito, você pode lançar novas atualizações da app de **qualquer** máquina que rode macOS.
 
 In an ideal world, to release an app update you would
 
-- spawn up a completely empty, temporary container
-- automatically install all dependencies (e.g. Xcode and [CocoaPods](https://cocoapods.org))
-- run the deployment script (e.g. [fastlane](https://fastlane.tools))
+Num mundo ideal, para lançar uma atualização de uma app, você
 
-Unfortunately, due to the fact that Xcode has to run on macOS, and macOS virtualization comes with technical as well as legal challenges, we can't use this approach ([rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712)). One third party tool that makes it possible to have consistent macOS environments is [Veertu](https://veertu.com/).
+- criaria um container temporário, completamente vazio
+- automaticamente instalaria todas dependências (ex: Xcode e [CocoaPods](https://cocoapods.org))
+- rodaria o script de deploy (ex: [fastlane](https://fastlane.tools))
 
-In recent years, disposable containers gained popularity for a variety of reasons:
+Infelizmente, devido ao fato que o Xcode precisa rodar no macOS, e virtualização de macOS implica em desafios técnicos e até mesmo legais, nós não podemos utilizar essa abordagem ([rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712)). Uma ferramenta de terceiros que torna possível ter ambientes macOS consistentes é a [Veertu](https://veertu.com/).
 
-- fully reproducible builds with zero dependencies to the host operating system
-- run on any machine (your local computer, or any server in the cloud)
-- a clean build with only the most necessary dependencies
+Nos últimos anos, containers descartáveis ganharam popularidade pelos mais variados motivos:
 
-Right now, the best approach we as iOS developers can take is:
+- builds completamente reproduzíveis com zero dependência do sistema operacional que o hospeda
+- roda em qualquer máquina (sua máquina local, ou qualquer servidor na nuvem)
+- um build limpo, com somente as dependências mais necessárias
 
-- Automate the installation of Xcode using [xcode-install](https://github.com/krausefx/xcode-install)
-- Make use of an [.xcode-version file](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) to specify the exact Xcode release
-- Define all dependencies in configuration files (see [Dependencies](/dependencies) factor)
-- Automate the complete deployment process using a deployment tool like [fastlane](https://fastlane.tools)
-- Automate code signing (e.g. [codesigning.guide](https://codesigning.guide))
-- Deploy often, ideally on a weekly schedule
+Atualmente, a melhor abordagem que nós desenvolvedores iOS podemos seguir é:
 
-Many companies use the concept of `Release trains`: a schedule in which a new version of your app gets released. All code that got merged into your main branch (e.g. `master` or `release`) at the time a release train "leaves" will be shipped to the App Store. This approach is implemented by most large iOS apps.
+- Automatizar a instalação do Xcode usando o [xcode-install](https://github.com/krausefx/xcode-install)
+- Usar um [arquivo .xcode-version](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) para especificar a versão exata do Xcode
+- Definir todas as dependências em arquivos de configuração (ver fator [Dependências](/dependencies))
+- Automatizar o processo completo de deploy utilizando uma ferramenta como o [fastlane](https://fastlane.tools)
+- Automatizar a assinatura do código (ou _code signing_) (ex: [codesigning.guide](https://codesigning.guide))
+- Fazer deploys com frequência, idealmente semanalmente
+
+Muitas empresas usam o conceito de Trens de lançamento (ou _Release trains_): uma agenda na qual uma nova versão da sua app é lançada. Todo código que foi mergeado na sua banch principal (ex: `master` ou `release`) no momento que um trem de lançamento "parte", será enviado pra App Store. Essa abordagem é implementada pela maioria das apps iOS grandes.
