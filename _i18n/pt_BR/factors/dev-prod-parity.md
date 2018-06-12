@@ -1,19 +1,19 @@
-Historically, there has been substantial gaps between development (a developer making live edits to the app on their local machine) and production (an app deployed on the App Store accessed by end users). These gaps manifest in three areas:
+Historicamente, tem existido grandes diferenças entre os ambientes de desenvolvimento (um desenvolvedor fazendo edições constantes na sua máquina local) e de produção (uma app que está na App Store e que pode ser acessada pelos usuários finais). Essas diferenças se manifestam em três áreas.
 
-- **The time gap:** A developer may work on code that takes days, weeks, or even months to go into production
-- **The personnel gap:** All iOS developers write code, just one person knows how to deploy the app
-- **The tools gap:** Developers may be using a staging server that runs a different version than the production one. Developers might be using a different Xcode release than the one that was used for deployment
+- **Diferença de tempo:** Um desenvolvedor pode trabalhar num código que leva dias, semanas ou até mesmo meses para ir pra produção
+- **Diferença de pessoas:** Todos desenvolvedores iOS escrevem código, somente um sabe como fazer o deploy do app
+- **Diferença de ferramentas:** Desenvolvedores podem estar usando um servidor de _staging_ que está rodando uma versão diferente da de produção. Desenvolvedores podem estar usando uma versão diferente do Xcode da versão que está sendo utilizada para fazer o deploy
 
-**An iOS-factor app is designed for [continuous deployment](https://avc.com/2011/02/continuous-deployment/) by keeping the gap between development and production small.** Looking at the three gaps described above:
+**Uma app fator-iOS é feita para [entrega contínua (ou _continuous deployment_)](https://avc.com/2011/02/continuous-deployment/) quando mantém as diferenças entre os ambientes de desenvolvimento e produção pequenas.** Olhando para as três diferenças descritas acima:
 
-- Make the time gap small: a developer may write code and have it deployed just a few days later
-- Make the personnel gap small: developers who wrote code are closely involved in deploying it and watching its behavior in production. This is best possible by completely automating the release process of your iOS app and put the know-how on how to do it in code declarations instead of documentation.
-- Make the tools gap small: keep development and production as similar as possible. Follow the principles of the [Dependencies](/dependencies) factor of iOS-factor and make use of a `.xcode-version` file as well as define all other dependencies explicitly.
+- Reduza a diferença de tempo: um desenvolvedor deve ser capaz de escrever um código e fazer o deploy dele apenas poucos dias depois
+- Reduza a diferença pessoal: quem escreveu o código está mais envolvido em fazer o deploy e observar seu comportamento em produção. Isso é melhor feito ao automatizar o processo de lançamento da sua app, e colocar o conhecimento sobre como o fazer nas declarações do próprio código ao invés de documentação.
+- Reduza a diferença entre as ferramentas: mantenha os ambientes de desenvolvimento e produção o mais parecido possível. Siga os princípios do fator [Dependências](/dependencies) do fator-iOS e utilize um arquivo `.xcode-version` além de definir todas outras dependências explicitamente.
 
-Summarizing the above into a table:
+Resumindo o que foi descrito acima em uma tabela:
 
-|          | Traditional iOS app | iOS-factor app |
+|          | app iOS tradicional | app fator-iOS- |
 |----------|---------------------|----------------|
-| Time between deploys | Months  | Days           |
-| Code authors vs code deployers | One person knows how to deploy | Deployment is automated, ideally on a server |
-| Dev vs production environments | Divergent |  As similar as possible |
+| Tempo entre deploys | Meses  | Dias             |
+| Quem escreve o código vs quem faz o deploy | 1 pessoa saber fazer o deploy | deploy automatizado, idealmente através de um servidor |
+| Ambientes de dev e produção | Divergentes |  O mais parecidos possíveis |
