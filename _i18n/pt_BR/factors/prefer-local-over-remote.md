@@ -1,22 +1,22 @@
-In the recent years, some development teams started using approaches that require less development work, on the expense of the user's app experience by moving more logic to a remote backend and having the iOS app be a thin client showing the server results. This approach results in user frustration when the app is used in a situation with a less than perfect internet connection (like in a subway, elevator or a spotty WiFi).
+Nos últimos anos, alguns times de desenvolvimento começaram a usar abordagens que requerem menos trabalho de desenvolvimento, pagando o custo da experiência de uso do aplicativo ao mover mais lógica para um backend remoto e ter a app iOS como apenas um cliente simples que mostra resultados do servidor. Este approach resulta na frustração de usuários quando a app é utilizada em situações com uma conexão de internet não tão perfeitas assim (como em metrôs, elevadores ou uma WiFi irregular).
 
-**An app should do as much of the business logic and calculations on-device as possible** for a variety of reasons:
+**Apps devem executar as regras de negócio e cálculos no aparelho sempre que possível** pelas mais variadas razões:
 
-- Privacy: avoid sending data to a remote server
-- Speed: Sending data to a server and waiting for a response requires time and might fail (e.g. spotty WiFi)
-- Data usage: users often have monthly data limits
-- Scaling: If your app goes viral, you are responsible to scale the backend services up
-- Battery life: Using mobile data is costly for battery life
-- Reliability: Some countries still have unreliable LTE/3G connections
+- Privacidade: evitar enviar dados para um servidor remoto
+- Velocidade: enviar dados para um servidor e esperar por uma resposta requer tempo e pode falhar (ex: WiFi irregular)
+- Utilização de dados: usuários muitas vezes tem limite de plano de dados
+- Escala: se sua app viralizar, você precisa escalar os serviços de backend
+- Vida útil da bateria: o uso de dados móveis é custoso para a vida útil da bateria
+- Confiança na rede: Alguns países ainda possuem conexões LTE/3G não muito confiáveis
 
-Most iOS apps require some kind of backend for certain tasks, like authentication, more complex calculations or storing of content.
+A maioria das apps iOS requer algum tipo de backend para determinadas tarefas, como autenticação, cálculos mais complexos ou armazenamento de dados.
 
-**Limit the number of tasks that run on the backend to a minimum to enhance the end-user's experience and to protect their privacy.**
+**Reduza o número de tafefas que rodam no backend para melhorar a experiência do usuário e proteger sua privacidade.**
 
-All parts of the app that don't necessarily **need** an internet connection (e.g. login) should work without any internet connection at all:
+Todas as partes da app que não necessariamente **precisam** de uma conexão com a internet (ex: login) devem ser capazes de funcionar sem conexão com a internet:
 
-- Your app's startup screen ([that shouldn't exist in the first place](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/)) should never wait for the first successful web response, as this causes bad UX for users with a spotty internet connection.
-- If your app requires an internet connection for everything (e.g. social networking app or ride sharing app), your app should still work (in read-only mode) without an internet connection to access historic data (e.g. recent rides, recent direct messages).
-- Any feature of your app that needs a working internet connection should show a clear error message that the server couldn't be reached.
-- As WiFi hotspots might require a login or confirmation of some sorts (e.g. hotel or airport), HTTPS requests will often get stuck and time-out after about a minute. Until Apple resolves this issue on a system level, we as developers have to make sure to properly handle those situations.
-- Never assume a user has a working internet connection on the first launch of the app. The user might install your app and then doesn't open it until they're on the go without an internet connection. You are responsible for shipping your app in a state that it works out of the box with the most up to date resources during deploy time. This directly plays together with the weekly release trains described in the [deployment](/deployment) factor.
+- A tela de início da sua app, ou _launch screen_, ([que a propósito não deveria existir](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/)), nunca deve esperar pela primeira resposta de sucesso da internet, pois isso gera uma experiência ruim para o usuário com uma conexão inconsistente
+- Se sua app requer conexão de internet para tudo (ex: app de rede social ou de carona compartilhada), sua app deve ainda assim funcionar (de modo passivo) sem uma conexão com a internet para acessar dados históricos (ex: caronas recentes, mensagens recentes).
+- Toda funcionalidade da sua app que precise de uma conexão funcional com a internet deve mostrar uma mensagem de erro clara de que não foi possível se conectar ao servidor.
+- Dado que hotspots WiFi podem requerer um login ou uma confirmação de algum tipo (ex: hotel ou aeroporto), requisições HTTPS irão ficar travadas com frequência e darão time-out após cerca de 1 minuto. Até que a Apple resolva esse problema a nível de sistema, nós como desenvolvedores temos que garantir que estamos tratando essas situações da forma correta.
+- Nunca assuma que um usuário possui uma conexão com a internet funcionando na primeira vez que abre a app. O usuário pode instalar sua app e não abrí-la, até o momento em que o faz e não tem uma conexão. Você é responsável por entregar sua app num estado que ela funciona com os recursos mais atuais durante o momento do deploy. Isso tem relação direta com os lançamentos semanais dos trens descritos no fator [deployment](/deployment).
