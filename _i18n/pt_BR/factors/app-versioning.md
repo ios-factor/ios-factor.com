@@ -1,4 +1,4 @@
-**Os números de versão e de build trabalham juntos para unicamente identificar um envio de uma app para a App Store**
+**Os números de versão e de build trabalham juntos para unicamente identificar um envio de um aplicativo para a App Store**
 
 - Número da versão (`CFBundleShortVersionString`) - mostrado como `Version` no Xcode, também chamado de versão de mercado (ou _marketing version_): A versão que é visível para o usuário final, precisa ser incrementada a cada lançamento público na App Store
 - Número do build (`CFBundleVersion`) - mostrado como `Build` no Xcode: um número incremental
@@ -17,7 +17,7 @@ agvtool new-marketing-version 2.0
 agvtool next-version -all
 ```
 
-Se você usa a ferramenta de deploy [fastlane](https://fastlane.tools), você pode usar as instruções [increment_version_number](https://docs.fastlane.tools/actions/increment_version_number/) e [increment_build_number](https://docs.fastlane.tools/actions/increment_build_number/) para automatizar o passo de incremento de versão do seu processo de deploy.
+Se você usa a ferramenta de distribuição [fastlane](https://fastlane.tools), pode usar as instruções [increment_version_number](https://docs.fastlane.tools/actions/increment_version_number/) e [increment_build_number](https://docs.fastlane.tools/actions/increment_build_number/) para automatizar o passo de incremento de versão do seu processo de distribuição.
 
 Exemplo de `Fastfile`:
 

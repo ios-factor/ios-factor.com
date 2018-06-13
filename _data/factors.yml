@@ -38,8 +38,8 @@
     title: 배포(Deployment)
     subtitle: 배포를 자동화해서 아무 기기에서나 릴리즈할 수 있도록 하세요.
   pt_BR:
-    title: Deployment
-    subtitle: Automatize seu processo de deploy para que possa liberar uma nova versão a partir de qualquer máquina
+    title: Distribuição
+    subtitle: Automatize seu processo de distribuição para que possa liberar uma nova versão a partir de qualquer máquina
   link: deployment
   index: "IV"
 - en:
@@ -50,7 +50,7 @@
     subtitle: 가능하다면 iOS 앱을 백엔드 없이도 잘 작동하는 똑똑한 앱으로 만드세요.
   pt_BR:
     title: Prefira local ao invés de remoto
-    subtitle: Matenha a app iOS inteligente o suficiente para que consiga funcionar sem backend sempre que possível
+    subtitle: Matenha o aplicativo iOS inteligente o suficiente para que consiga funcionar sem backend sempre que possível
   link: prefer-local-over-remote
   index: "V"
 - en:
@@ -72,7 +72,7 @@
     subtitle: 일관성을 유지하기 위해 앱의 빌드와 버전 넘버를 자동화하세요.
   pt_BR:
     title: Versionamento de apps
-    subtitle: Automatize os números de versão e build de sua app para gerar consistência
+    subtitle: Automatize os números de versão e build de seu aplicativo para gerar consistência
   link: app-versioning
   index: "VII"
 - en:
@@ -83,6 +83,6 @@
     subtitle: 데이터를 저장할 때는 Apple의 가이드라인을 지키세요.
   pt_BR:
     title: Persistência de dados
-    subtitle: Siga as instruções da Apple quando estiver armazenando dados
+    subtitle: Siga as instruções da Apple ao armazenar dados
   link: persistence-of-data
   index: "VIII"
