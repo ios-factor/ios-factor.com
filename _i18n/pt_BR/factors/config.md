@@ -23,7 +23,7 @@ Atualizações de configuração OTA são poderosas e instantaneamente lhe permi
 - Atualizar _web hosts_ ou outras URLs que foram atualizadas
 - Desabilitar funcionalidades remotamente ou esconder botões
 
-Sem atualizações OTA você tem que esperar mais ou menos um dia para o processo de revisão de apps aprovar seu aplicativo. Todo envio também inclui o risco de ser rejeitado, atrasando o lançamento de um potencial envio urgente.
+Sem atualizações OTA você precisa esperar mais ou menos um dia para o processo de revisão de apps aprovar seu aplicativo. Todo envio também inclui o risco de ser rejeitado, atrasando o lançamento de um potencial envio urgente.
 
 Da mesma forma, você pode querer continuar dando retrocompatibilidade, o que significa que usuários que não podem atualizar pra versão mais nova do iOS provavelmente não conseguirão instalar nenhuma atualização do seu aplicativo. Disponibilizando atualizações OTA, você consegue continuar dando suporte a versões mais antigas do seu aplicativo.
 

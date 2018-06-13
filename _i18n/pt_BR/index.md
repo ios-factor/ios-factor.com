@@ -16,7 +16,7 @@ Nos últimos 10 anos, o processo de desenvolvimento para iOS mudou drasticamente
 
 ## O que é o iOS-factor?
 
-O iOS-factor é um projeto experimental iniciado em maio de 2018. Ele tem o objetivo de prover uma coleção de melhores práticas para a construção de aplicações iOS de alta qualidade. Cada tópico é coberto por um `fator`, que descreve o estado ideal de como uma certa categoria do processo de desenvolvimento de apps iOS deveria ser.
+O iOS-factor é um projeto experimental iniciado em maio de 2018. Ele tem o objetivo de prover uma coleção de boas práticas para a construção de aplicações iOS de alta qualidade. Cada tópico é coberto por um `fator`, que descreve o estado ideal de como uma certa categoria do processo de desenvolvimento de apps iOS deveria ser.
 
 Devido a certas limitações (como o Xcode rodar só no macOS) nem todos os requisitos podem ser preenchidos. Este projeto tem o intuito de definir objetivos, assim como as atuais melhores abordagens para resolver alguns dos desafios com os quais nos deparamos.
 

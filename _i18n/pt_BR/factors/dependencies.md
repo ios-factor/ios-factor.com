@@ -1,12 +1,12 @@
-**Idealmente, um aplicativo iOS-factor nunca depende da existência implícita de pacotes a nível de sistema**. Ela declara todas dependências, completamente e exatamente através de um manifesto de declaração de dependências. Isso inclui as versões exatas do [Xcode](https://developer.apple.com/xcode), [CocoaPods](https://cocoapods.org) e [fastlane](https://fastlane.tools).
+**Idealmente, um aplicativo iOS-factor nunca depende da existência implícita de pacotes a nível de sistema**. Ele declara todas dependências, completamente e exatamente através de um manifesto de declaração de dependências. Isso inclui as versões exatas do [Xcode](https://developer.apple.com/xcode), [CocoaPods](https://cocoapods.org) e [fastlane](https://fastlane.tools).
 
 O benefício da declaração explícita de dependências é que isso simplifica a configuração inicial do projeto para novos desenvolvedores, assim como ajuda a ter um sistema de build confiável que também é capaz de executar builds antigos novamente de uma forma que seja reproduzível. Um novo desenvolvedor pode baixar o código fonte do aplicativo na sua máquina, tendo somente o _runtime_ da linguagem e o gerenciador de dependências instalados como os únicos pré-requisitos.
 
-**Ao especificar as dependências exatas, você consegue regerar um build de 6 meses atrás, sabendo que vai dar certo** dado que vai usar a mesma versão do Xcode, CocoaPods e do Swift.
+**Ao especificar as dependências exatas, você consegue regerar um build de 6 meses atrás, sabendo que irá funcionar** dado que serão utilizadas as mesmas versões do Xcode, CocoaPods e do Swift.
 
 Dado que o desenvolvimento pra iOS não consegue ser tão encapsulável como é o caso do desenvolvimento para web, estamos limitados à ferramentas de terceiros pra preencher essa necessidade enquanto a Apple não disponibiliza uma solução oficial ([rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712)).
 
-Por enquanto, você pode usar variadas ferramentas de terceiros pra declarar explicitamente essas dependências.
+Por enquanto, você pode utilizar variadas ferramentas de terceiros pra declarar explicitamente essas dependências.
 
 #### Ferramentas para Swift
 
@@ -14,11 +14,11 @@ A Apple fornece um guia excelente sobre o [Swift Package Manager](https://swift.
 
 #### Especificando uma versão do Xcode
 
-Você pode usar um arquivo [.xcode-version](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) na raiz do seu projeto iOS para declarar a versão exata do Xcode a ser usada para um dado aplicativo iOS.
+Você pode utilizar um arquivo [.xcode-version](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) na raiz do seu projeto iOS para declarar a versão exata do Xcode a ser usada para um dado aplicativo iOS.
 
-Dessa forma, você pode configurar seu sistema de integração contínua para instalar automaticamente e usar uma determinada versão do Xcode. Para trocar a versão do Xcode (assumindo que você já o tem instalado), você pode usar uma ferramenta como o [chxcode](https://github.com/klaaspieter/chxcode).
+Dessa forma, você pode configurar seu sistema de integração contínua para instalar automaticamente e utilizar uma determinada versão do Xcode. Para trocar a versão do Xcode (assumindo que você já o tem instalado), você pode utilizar uma ferramenta como o [chxcode](https://github.com/klaaspieter/chxcode).
 
-Para automatizar a versão do Xcode, você pode usar uma ferramenta chamada [xcode-install](https://github.com/krausefx/xcode-install) até a Apple fornecer uma ferramenta de linha de comando para instalar o Xcode ([rdar://40669425](https://openradar.appspot.com/radar?id=5064112975380480)).
+Para automatizar a versão do Xcode, você pode utilizar uma ferramenta chamada [xcode-install](https://github.com/krausefx/xcode-install) até a Apple fornecer uma ferramenta de linha de comando para instalar o Xcode ([rdar://40669425](https://openradar.appspot.com/radar?id=5064112975380480)).
 
 #### Ferramentas para Ruby
 

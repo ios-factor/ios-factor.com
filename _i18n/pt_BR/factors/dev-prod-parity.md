@@ -8,7 +8,7 @@ Historicamente, tem existido grandes diferenças entre os ambientes de desenvolv
 
 - Reduza as diferenças de tempo: um desenvolvedor deve ser capaz de escrever um código e distribuir uma nova versão apenas poucos dias após
 - Reduza as diferenças de conhecimento entre as pessoas: quem escreveu o código está mais envolvido em fazer a distribuição e observar seu comportamento em produção. Isso é melhor feito ao automatizar o processo de lançamento de seu aplicativo, e colocar o conhecimento sobre como o fazer nas declarações do próprio código ao invés de documentação.
-- Reduza as diferenças entre as ferramentas: mantenha os ambientes de desenvolvimento e produção o mais parecido possíveis. Siga os princípios do fator [Dependências](/dependencies) do iOS-factor e utilize um arquivo `.xcode-version` além de definir todas outras dependências explicitamente.
+- Reduza as diferenças entre as ferramentas: mantenha os ambientes de desenvolvimento e produção o mais parecidos possível. Siga os princípios do fator [Dependências](/dependencies) do iOS-factor e utilize um arquivo `.xcode-version` além de definir todas outras dependências explicitamente.
 
 Resumindo o que foi descrito acima em uma tabela:
 

@@ -1,4 +1,4 @@
-Nos últimos anos, alguns times de desenvolvimento começaram a usar abordagens que requerem menos trabalho de desenvolvimento, pagando o custo da experiência de uso do aplicativo ao mover mais lógica para um backend remoto e ter o aplicativo iOS sendo apenas um cliente simples que mostra resultados do servidor. Esse approach resulta na frustração de usuários quando o aplicativo é utilizado em situações com uma conexão de internet não tão perfeitas assim (como em metrôs, elevadores ou uma rede WiFi irregular).
+Nos últimos anos, alguns times de desenvolvimento começaram a usar abordagens que requerem menos trabalho de desenvolvimento, às custas da experiência de uso do aplicativo, ao mover mais lógica para um backend remoto e ter o aplicativo iOS sendo apenas um cliente simples que mostra resultados do servidor. Esse approach resulta na frustração de usuários quando o aplicativo é utilizado em situações com uma conexão de internet não tão perfeitas assim (como em metrôs, elevadores ou uma rede WiFi irregular).
 
 **Aplicativos devem executar regras de negócio e cálculos no aparelho sempre que possível** pelas mais variadas razões:
 
