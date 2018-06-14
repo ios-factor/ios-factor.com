@@ -4,6 +4,9 @@
   ko:
     title: 디펜던시(Dependencies)
     subtitle: 선언은 명시적으로, 디펜던시는 고립시키세요.
+  pt_BR:
+    title: Dependências
+    subtitle: Explicitamente declare e isole dependências
   link: dependencies
   index: "I"
 - en:
@@ -12,6 +15,9 @@
   ko:
     title: 설정(Config)
     subtitle: 코드에선 설정을 하지마세요. 디폴트 설정을 정해두고, OTA 업데이트를 허용하세요.
+  pt_BR:
+    title: Configuração
+    subtitle: Sem configuração no código, submeta com a configuração padrão e permita atualizações "Over the air"
   link: config
   index: "II"
 - en:
@@ -20,6 +26,9 @@
   ko:
     title: 개발/라이브 동일시하기(Dev/prod parity)
     subtitle: 개발 버전과 테스트 버전, 그리고 라이브 버전을 가능한한 똑같이 만드세요.
+  pt_BR:
+    title: Paridade de ambientes de desenvolvimento/produção
+    subtitle: Mantenha os ambientes de desenvolvimento, teste e produção o mais similares possível
   link: dev-prod-parity
   index: "III"
 - en:
@@ -28,6 +37,9 @@
   ko:
     title: 배포(Deployment)
     subtitle: 배포를 자동화해서 아무 기기에서나 릴리즈할 수 있도록 하세요.
+  pt_BR:
+    title: Distribuição
+    subtitle: Automatize seu processo de distribuição para que possa liberar uma nova versão a partir de qualquer máquina
   link: deployment
   index: "IV"
 - en:
@@ -36,6 +48,9 @@
   ko:
     title: 원격보다 로컬 선호하기(Prefer local over remote)
     subtitle: 가능하다면 iOS 앱을 백엔드 없이도 잘 작동하는 똑똑한 앱으로 만드세요.
+  pt_BR:
+    title: Prefira local ao invés de remoto
+    subtitle: Matenha o aplicativo iOS inteligente o suficiente para que consiga funcionar sem backend sempre que possível
   link: prefer-local-over-remote
   index: "V"
 - en:
@@ -44,6 +59,9 @@
   ko:
     title: 이전 버전과 호환되는 API(Backwards compatible APIs)
     subtitle: 모든 유저가 최신 버전을 사용한다고 가정하지 마세요.
+  pt_BR:
+    title: APIs com compatibilidade retroativa
+    subtitle: Não assuma que todo usuário irá sempre atualizar para a versão mais recente de sua app
   link: backwards-compatible-apis
   index: "VI"
 - en:
@@ -52,6 +70,9 @@
   ko:
     title: 앱 버전 정하기(App versioning)
     subtitle: 일관성을 유지하기 위해 앱의 빌드와 버전 넘버를 자동화하세요.
+  pt_BR:
+    title: Versionamento de apps
+    subtitle: Automatize os números de versão e build de seu aplicativo para gerar consistência
   link: app-versioning
   index: "VII"
 - en:
@@ -60,5 +81,8 @@
   ko:
     title: 데이터의 지속성(Persistence of data)
     subtitle: 데이터를 저장할 때는 Apple의 가이드라인을 지키세요.
+  pt_BR:
+    title: Persistência de dados
+    subtitle: Siga as instruções da Apple ao armazenar dados
   link: persistence-of-data
   index: "VIII"
