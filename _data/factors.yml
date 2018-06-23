@@ -7,6 +7,9 @@
   pt_BR:
     title: Dependências
     subtitle: Explicitamente declare e isole dependências
+  es:
+    title: Dependencias
+    subtitle: Declarar y aislar dependencias explícitamente.
   link: dependencies
   index: "I"
 - en:
@@ -18,6 +21,9 @@
   pt_BR:
     title: Configuração
     subtitle: Sem configuração no código, submeta com a configuração padrão e permita atualizações "Over the air"
+  es:
+    title: Configuración
+    subtitle: Mantener configuración por fuera del código, desplegar incluyendo configuración por defecto y permitir actualizaciones "Over-the-Air" 
   link: config
   index: "II"
 - en:
@@ -29,6 +35,9 @@
   pt_BR:
     title: Paridade de ambientes de desenvolvimento/produção
     subtitle: Mantenha os ambientes de desenvolvimento, teste e produção o mais similares possível
+  es:
+    title: Simetría entre ambientes de desarrollo y producción
+    subtitle: Mantener los ambientes de desarrollo, pruebas y producción tan similares como sea posible
   link: dev-prod-parity
   index: "III"
 - en:
@@ -40,6 +49,9 @@
   pt_BR:
     title: Distribuição
     subtitle: Automatize seu processo de distribuição para que possa liberar uma nova versão a partir de qualquer máquina
+  es:
+    title: Despliegue
+    subtitle: Automatizar el despliegue de manera que pueda ser publicado desde cualquier ordenador
   link: deployment
   index: "IV"
 - en:
@@ -51,6 +63,9 @@
   pt_BR:
     title: Prefira local ao invés de remoto
     subtitle: Matenha o aplicativo iOS inteligente o suficiente para que consiga funcionar sem backend sempre que possível
+  es:
+    title: Preferir local en vez de remoto
+    subtitle: En lo posible, mantener la aplicación iOS lo suficientemente inteligente como para operar sin back-end
   link: prefer-local-over-remote
   index: "V"
 - en:
@@ -62,6 +77,9 @@
   pt_BR:
     title: APIs com compatibilidade retroativa
     subtitle: Não assuma que todo usuário irá sempre atualizar para a versão mais recente de sua app
+  es:
+    title: APIs retroactivamente compatibles
+    subtitle: Nunca asumir que cada usuario actualiza a la versión más reciente
   link: backwards-compatible-apis
   index: "VI"
 - en:
@@ -73,6 +91,9 @@
   pt_BR:
     title: Versionamento de apps
     subtitle: Automatize os números de versão e build de seu aplicativo para gerar consistência
+  es:
+    title: Versionamiento de la aplicación
+    subtitle: Automatizar la versión y el número de compilación para mantener consistencia
   link: app-versioning
   index: "VII"
 - en:
@@ -84,5 +105,8 @@
   pt_BR:
     title: Persistência de dados
     subtitle: Siga as instruções da Apple ao armazenar dados
+  es:
+    title: Persistencia de datos
+    subtitle: Seguir los lineamientos de Apple al almacenar información
   link: persistence-of-data
   index: "VIII"
