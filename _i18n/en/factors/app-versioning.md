@@ -1,7 +1,7 @@
 **Version and the build numbers work together to uniquely identify a particular App Store submission for an app:**
 
 - Version number (`CFBundleShortVersionString`) - shown as `Version` in Xcode, also called the marketing version: The version that's visible to the end-user, it has to be incremented on each public App Store release
-- Build number (`CFBundleVersion`) - shown as `Build` in Xcode: an incrementing number following semver
+- Build number (`CFBundleVersion`) - shown as `Build` in Xcode: an incrementing number
 
 In today's iOS development processes there is no reason you should manually change those numbers. Instead, you want a reliable and automated system taking care of keeping the versions up to date.
 
