@@ -1,4 +1,4 @@
-Como descrito no fator [Dependências](/dependencies), o repositório do código deve incluir todas as dependências que são necessárias para fazer o build, testar e submeter o aplicativo iOS.
+Como descrito no fator [Dependências](/pt_BR/dependencies), o repositório do código deve incluir todas as dependências que são necessárias para fazer o build, testar e submeter o aplicativo iOS.
 
 Assim que seu aplicativo preencher esse requisito, você pode lançar novas atualizações de **qualquer** máquina que rode macOS.
 
@@ -20,7 +20,7 @@ Atualmente, a melhor abordagem que nós desenvolvedores iOS podemos seguir é:
 
 - Automatizar a instalação do Xcode usando o [xcode-install](https://github.com/krausefx/xcode-install)
 - Usar um [arquivo .xcode-version](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) para especificar a versão exata do Xcode
-- Definir todas as dependências em arquivos de configuração (ver fator [Dependências](/dependencies))
+- Definir todas as dependências em arquivos de configuração (ver fator [Dependências](/pt_BR/dependencies))
 - Automatizar o processo completo de distribuição utilizando uma ferramenta como o [fastlane](https://fastlane.tools)
 - Automatizar a assinatura do código (ou _code signing_) (ex: [codesigning.guide](https://codesigning.guide))
 - Fazer distribuições com frequência, idealmente ao menos uma vez por semana
