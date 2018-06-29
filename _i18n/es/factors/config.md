@@ -19,9 +19,9 @@ Dado que los despliegues en la plataforma iOS son significativamente más lentos
 Las actualizaciones en configuración _OTA_ son extremadamente útiles y permiten de manera instantanea:
 
 - Correr tests A/B para habilitar ciertas características o cambios en la interfaz gráfica sólo para un grupo específico de usuarios activos.
-- Rotación de claves de la API
-- Actualizar dominios web o otros enlaces que han cambiado
-- Deshabilitar características o ocultar botones de manera remota
+- Rotación de claves de la API.
+- Actualizar dominios web u otros enlaces que han cambiado.
+- Deshabilitar características u ocultar botones de manera remota.
 
 Sin actualizaciones _Over-the-Air_ es necesario esperar alrededor de un dia para que la aplicación sea aceptada en la revisión. Cada entrega incrementa además el riesgo de que la aplicación sea rechazada y una posible publicación urgente se vea retrasada.
 
@@ -29,5 +29,5 @@ Al mismo tiempo, se desea tener compatibilidad retroactiva, es decir, los usuari
 
 Algunos posibles acercamientos a la implementación de actualizaciones _Over-the-Air_:
 
-- Implementar una solución propia
-- Servicios web registrados como [Configuración Remota con Firebase](https://firebase.google.com/docs/remote-config/)
+- Implementar una solución propia.
+- Servicios web registrados como [Configuración Remota con Firebase](https://firebase.google.com/docs/remote-config/).
