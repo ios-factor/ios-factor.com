@@ -1,4 +1,4 @@
-Mientras la mayoria de usuarios finales actualizan a la versión más reciente al cabo de unas pocas semanas, siempre habrá un grupo de usuarios que no lo harán, esto debido a múltiples razones. A menudo está relacionado a la versión de iOS que estén corriendo, ya que la actualización del sistema operativo puede depender de la antigüedad de dicho dispositivo.
+Mientras la mayoría de usuarios finales actualizan a la versión más reciente al cabo de unas pocas semanas, siempre habrá un grupo de usuarios que no lo harán, esto debido a múltiples razones. A menudo está relacionado a la versión de iOS que estén corriendo, ya que la actualización del sistema operativo puede depender de la antigüedad de dicho dispositivo.
 
 Se puede instalar y hacer uso de Facebook Messenger en un iPad primera generación (2010). Si bien las más recientes características no son compatibles, el núcleo de funcionalidades estará disponible gracias al versionamiento de la API.
 

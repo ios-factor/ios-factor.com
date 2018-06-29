@@ -1,7 +1,7 @@
 **La versión y el número de compilación trabajan juntos para identificar de manera única el despliegue de una aplicación en la App Store:**
 
-- Versión (`CFBundleShortVersionString`) - visto como `Version` en Xcode, también conocido como _marketing version_: Es la versión visible al usuario final, ésta debe ser incrementada en cada publicación al App Store
-- Número de compilación (`CFBundleVersion`) - visto simplemente como `Build` en Xcode: Es el número incremental a través del versionamiento tradicional de software (SemVer)
+- Versión (`CFBundleShortVersionString`) - visto como `Version` en Xcode, también conocido como _marketing version_: Es la versión visible al usuario final, ésta debe ser incrementada en cada publicación al App Store.
+- Número de compilación (`CFBundleVersion`) - visto simplemente como `Build` en Xcode: Es el número incremental a través del versionamiento tradicional de software (SemVer).
 
 Hoy en dia en los procesos de desarrollo iOS, no hay razón alguna para manipular estos números manualmente. En cambio, se procura tener un sistema automatizado confiable que se encargue de mantener las versiones actualizadas.
 
