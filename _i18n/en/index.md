@@ -22,6 +22,6 @@ Due to certain limitations (like Xcode running only on macOS) not all requiremen
 
 iOS-factor is all about the bigger-picture iOS app development processes and architecture decisions and will not cover any language specific challenges.
 
-This is a living project, maintained by the iOS developer community. You can find the full source on [GitHub](https://github.com/ios-factor/ios-factor.com) and update existing pages or add new factors.
+This is a living project, maintained by the iOS development community. You can find the full source on [GitHub](https://github.com/ios-factor/ios-factor.com) and update existing pages or add new factors.
 
 -----
