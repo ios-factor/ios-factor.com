@@ -1,0 +1,15 @@
+{% for factor in site.data.factors %}
+  {% assign currentFactorURL = "/" | append: factor.link %}
+  {% if currentFactorURL == page.url %}
+    {% assign title = factor.en.title %}
+    {% assign subtitle = factor.en.subtitle %}
+    {% assign index = factor.index %}
+
+    {% assign nextLink = site.data.factors[forloop.index].link %}
+
+    {% assign previousIndex = forloop.index | minus: 2 %}
+    {% if previousIndex >= 0 %}
+      {% assign previousLink = site.data.factors[previousIndex].link %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
