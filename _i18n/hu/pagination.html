@@ -1,0 +1,13 @@
+<div class="pager">
+  {% if previousLink %}
+    <a class="previous" href="{{previousLink}}">Previous</a>
+  {% else %}
+    <a class="previous" href="/">Home</a>
+  {% endif %}
+
+  {% if nextLink %}
+    <a class="next" href="{{nextLink}}">Next</a>
+  {% else %}
+    <a class="next" href="https://github.com/ios-factor/ios-factor.com">Contribute your own</a>
+  {% endif %}
+</div>
