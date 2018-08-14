@@ -1,28 +1,28 @@
-**Ideally, an iOS-factor app never relies on the implicit existence of system-wide packages.** It declares all dependencies, completely and exactly via a dependency declaration manifest. This includes the exact versions of [Xcode](https://developer.apple.com/xcode), [CocoaPods](https://cocoapods.org) and [fastlane](https://fastlane.tools).
+**理想的には iOS-factor アプリはシステム全体のパッケージの暗黙的な存在に依存することはありません。** すべての依存関係を依存関係宣言マニフェストによって完全かつ正確に宣言します。 これには [Xcode](https://developer.apple.com/xcode) や [CocoaPods](https://cocoapods.org)、[fastlane](https://fastlane.tools) の正確なバージョンを含みます。
 
-The benefit of explicit dependency declaration is that it simplifies setup for developers new to the app, as well as having a reliable build system that is also able to run past builds again in a reproducible fashion. A new developer can check out the app’s codebase onto their development machine, requiring only the language runtime and dependency manager installed as prerequisites. They will be able to set up everything needed to run the app’s code with a deterministic build command.
+明示的に依存関係を宣言するメリットは、アプリを初めて使用する開発者向けの設定を簡素化するだけでなく、再現可能な方法で過去のビルドを再実行できる信頼できるビルドシステムを持つことです。 新しい開発者は、開発マシンにアプリケーションのコードベースをチェックアウトすることができます。これには、言語ランタイムと依存関係マネージャーだけが前提条件としてインストールされている必要があります。 彼らは決定的なビルドコマンドでアプリケーションのコードを実行するために必要なものすべてを設定することができます。
 
-**By specifying the exact dependencies you can re-trigger a build from 6 months ago, knowing that it will succeed** as it will use the same version of Xcode, CocoaPods and Swift version.
+**正確な依存関係を指定することで、6か月前から遡ってビルドできます。By specifying the exact dependencies you can re-trigger a build from 6 months ago, knowing that it will succeed** 正確な依存関係を指定することで、6か月前からビルドを再トリガーすることができます.Xcode、CocoaPods、Swiftの同じバージョンを使用するため、ビルドが成功することがわかります。
 
-Since iOS development cannot be containerized like it's already the case for web development, we're limited to third party tools trying to fulfill this requirement until Apple provides an official solution ([rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712)).
+iOS 開発は Web 開発のようにはコンテナ化されておらず、Apple が公式のソリューション（([rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712)）を提供するまで、この要件を満たすサードパーティのツールに限られています。
 
-For the time being, you can use various third-party tooling to explicitly declare those dependencies.
+当面は、さまざまなサードパーティのツールを使用することで依存関係を明示的に宣言することができます。
 
-#### Swift-based tooling
+#### Swift ベースのツール
 
-Apple provides an excellent guide on the [Swift Package Manager](https://swift.org/package-manager).
+Appleは [Swift Package Manager](https://swift.org/package-manager) に関する優れたガイドを提供しています。
 
-#### Specifying an Xcode version
+#### Xcode のバージョン指定
 
-You can use a [.xcode-version](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) file in the root of your iOS project to declare the exact version of Xcode to be used for a given iOS app.
+iOS プロジェクトのルートディレクトリで [.xcode-version](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) ファイルを使えば、Xcode の正確なバージョンを宣言することができます。.
 
-This way, you can configure your CI-system to automatically install and use a given Xcode version. To switch the Xcode version (assuming you already have it installed), you can use a tool like [chxcode](https://github.com/klaaspieter/chxcode).
+この方法では、CI システムが指定されたバージョンの Xcode を自動的にインストールして使うよう構成することができます。（インストール済みの）Xcode のバージョンを切り替えるには、[chxcode](https://github.com/klaaspieter/chxcode) のようなツールを使うことができます。
 
-To automate the installation of Xcode, you can use the third party tool [xcode-install](https://github.com/krausefx/xcode-install) until Apple provides a command line tool to install Xcode ([rdar://40669425](https://openradar.appspot.com/radar?id=5064112975380480)).
+Xcode のインストールを自動化するには、Apple が Xcode をインストールするコマンドラインツール（[rdar://40669425](https://openradar.appspot.com/radar?id=5064112975380480)）を提供するまではサードパーティ製ツールである [xcode-install](https://github.com/krausefx/xcode-install) を使います。
 
-#### Ruby-based tooling
+#### Ruby ベースのツール
 
-Ruby uses [bundler](https://bundler.io) to define the exact dependencies to be used for a build in a so-called `Gemfile`:
+Ruby は `Gemfile` で正確な依存関係を定義するために [bundler](https://bundler.io) を使います。:
 
 ```ruby
 source "https://rubygems.org"
@@ -31,11 +31,11 @@ gem "fastlane", ">= 2.96.1", "<= 3.0.0"
 gem "cocoapods", "~> 1.5"
 ```
 
-The `Gemfile` and the automatically generated `Gemfile.lock` must be checked into version control. Any build system can then run `bundle install` to install all Ruby-based build dependencies.
+`Gemfile` と自動的に生成される `Gemfile.lock` は Ruby ベースバージョン管理システムにチェックインされます。ビルドシステムは Ruby ベースの依存関係をインストールするために `bundle install` を実行します。
 
-#### JavaScript-based tooling
+#### JavaScript ベースのツール
 
-JavaScript based iOS apps (e.g. React Native) make use of a `package.json` file that defines all dependencies needed.
+JavaScript ベースの iOS アプリ（例: React Native）は、`package.json` ファイルを使って必要なすべての依存関係を定義します。
 
 ```json
 {
@@ -52,4 +52,4 @@ JavaScript based iOS apps (e.g. React Native) make use of a `package.json` file 
 }
 ```
 
-The `package.json` should be checked into version control for reproducible builds.
+`package.json` は再現可能なビルドのバージョン管理にチェックインされます。
