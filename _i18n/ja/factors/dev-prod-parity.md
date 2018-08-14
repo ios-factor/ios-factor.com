@@ -1,19 +1,19 @@
-Historically, there has been substantial gaps between development (a developer making live edits to the app on their local machine) and production (an app deployed on the App Store accessed by end users). These gaps manifest in three areas:
+歴史的に見て、開発（ローカルマシン上でアプリを編集する開発者）とプロダクション（エンドユーザーがアクセスする App Store にデプロイされたアプリ）の間にはかなりのギャップがあります。これらのギャップは3つの領域に現れます。:
 
-- **The time gap:** A developer may work on code that takes days, weeks, or even months to go into production
-- **The personnel gap:** All iOS developers write code, just one person knows how to deploy the app
-- **The tools gap:** Developers may be using a staging server that runs a different version than the production one. Developers might be using a different Xcode release than the one that was used for deployment
+- **時間のギャップ:** 開発者はプロダクションへ移るまでに数日、数週間、数ヶ月かかる作業をしているかもしれない
+- **人のギャップ:** すべての iOS デベロッパはコードを書き、ひとりだけアプリをデプロイする方法を知っている
+- **ツールのギャップ:** 開発者はプロダクションとは異なるバージョンを実行するステージングサーバーを使用しているかもしれません。また、デプロイに使用されたものとは異なるバージョンの Xcode を使用しているかもしれません。
 
-**An iOS-factor app is designed for [continuous deployment](https://avc.com/2011/02/continuous-deployment/) by keeping the gap between development and production small.** Looking at the three gaps described above:
+**iOS-factor アプリは開発とプロダクションのギャップを小さく保つことによって [continuous deployment](https://avc.com/2011/02/continuous-deployment/) のために設計されています。上記の3つのギャップを見る
 
-- Make the time gap small: a developer may write code and have it deployed just a few days later
-- Make the personnel gap small: developers who wrote code are closely involved in deploying it and watching its behavior in production. This is best possible by completely automating the release process of your iOS app and put the know-how on how to do it in code declarations instead of documentation.
-- Make the tools gap small: keep development and production as similar as possible. Follow the principles of the [Dependencies](/dependencies) factor of iOS-factor and make use of a `.xcode-version` file as well as define all other dependencies explicitly.
+- 時間のギャップを小さくする: デベロッパーはコードを書いて数日後にはデプロイする
+- 人のギャップを小さくする: コードを書くデベロッパーはデプロイに密接に関わり、プロダクションでの動作を確認する。This is best possible by completely automating the release process of your iOS app and put the know-how on how to do it in code declarations instead of documentation.
+- ツールのギャップを小さくする: 開発とプロダクションを可能な限り同じにする。iOS-factor の  [Dependencies](/dependencies) の原則に従い、`.xcode-version` ファイルを活用してほかのすべての依存関係を明示的に定義する。
 
-Summarizing the above into a table:
+上記内容を表にまとめたもの:
 
-|          | Traditional iOS app | iOS-factor app |
+|          | 従来の iOS アプリ | iOS-factor アプリ |
 |----------|---------------------|----------------|
-| Time between deploys | Months  | Days           |
-| Code authors vs code deployers | One person knows how to deploy | Deployment is automated, ideally on a server |
-| Dev vs production environments | Divergent |  As similar as possible |
+| デプロイの間隔 | 数ヶ月  | 数日           |
+| コード作成者とコード配布者 | ひとりがデプロイの方法を知っている | デプロイは自動化、理想的にはサーバー上 |
+| 開発環境とプロダクション環境 | 異なる |  可能な限り同じ |
