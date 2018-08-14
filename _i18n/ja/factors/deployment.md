@@ -1,28 +1,28 @@
-As described in the [Dependencies](/dependencies) factor, the code repository should include all dependencies needed to build, test and release the iOS app.
+[Dependencies](/dependencies) で述べたように、コードのリポジトリは iOS アプリのビルド、テスト、リリースに必要なすべての依存関係を含むべきです。
 
-As soon as your app fulfills that requirement, you can release new app updates from **any** macOS based machine.
+その要件を満たせば、**どんな** macOS のマシンからでもアプリをリリースできます。
 
-In an ideal world, to release an app update you would
+理想では、アプリをリリースするために
 
-- spawn up a completely empty, temporary container
-- automatically install all dependencies (e.g. Xcode and [CocoaPods](https://cocoapods.org))
-- run the deployment script (e.g. [fastlane](https://fastlane.tools))
+- 完全に空の、一時的なコンテナを生成する
+- 自動的にすべての依存関係をインストールする（Xcode や [CocoaPods](https://cocoapods.org) など）
+- デプロイスクリプトを実行する（[fastlane](https://fastlane.tools) など）
 
-Unfortunately, due to the fact that Xcode has to run on macOS, and macOS virtualization comes with technical as well as legal challenges, we can't use this approach ([rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712)). One third party tool that makes it possible to have consistent macOS environments is [Veertu](https://veertu.com/).
+残念ながら、Xcode は macOS 上で動かす必要があるためUnfortunately, due to the fact that Xcode has to run on macOS, and macOS virtualization comes with technical as well as legal challenges, we can't use this approach ([rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712)). [Veertu](https://veertu.com/) というサードパーティー製の商用ソリューションで Apple のハードウェア上で macOS の仮想環境を構築することができます。There is a 3rd party commercial (closed source) solution called Veertu that allows you to generate virtual macOS environments on Apple hardware.
 
-In recent years, disposable containers gained popularity for a variety of reasons:
+近年、使い捨てのコンテナはさまざまな理由で人気を得ています。
 
-- fully reproducible builds with zero dependencies to the host operating system
-- run on any machine (your local computer, or any server in the cloud)
-- a clean build with only the most necessary dependencies
+- ホスト OS に依存しない完全に再現可能なビルド
+- どんなマシンでも実行（ローカルコンピューターやクラウドのサーバーなど）
+- 最低限必要な依存関係だけのクリーンビルド
 
-Right now, the best approach we as iOS developers can take is:
+いま iOS デベロッパーがとれるベストなアプローチは次のとおりです。
 
-- Automate the installation of Xcode using [xcode-install](https://github.com/krausefx/xcode-install)
-- Make use of an [.xcode-version file](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) to specify the exact Xcode release
-- Define all dependencies in configuration files (see [Dependencies](/dependencies) factor)
-- Automate the complete deployment process using a deployment tool like [fastlane](https://fastlane.tools)
-- Automate code signing (e.g. [codesigning.guide](https://codesigning.guide))
-- Deploy often, ideally on a weekly schedule
+- [xcode-install](https://github.com/krausefx/xcode-install) を使った Xcode 自動インストール
+- 正確な Xcode バージョンを指定するために [.xcode-version ファイル](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) を使う
+- 設定ファイルですべての依存関係を定義する（[Dependencies](/dependencies) ファクターを参照)
+- Automate the complete deployment process using a deployment tool like [fastlane](https://fastlane.tools) のようなデプロイツールを使った完全なデプロイプロセスの自動化する
+- コード署名を自動化する（例: [codesigning.guide](https://codesigning.guide)）
+- 頻繁に、理想的には週でデプロイする
 
-Many companies use the concept of `Release trains`: a schedule in which a new version of your app gets released. All code that got merged into your main branch (e.g. `master` or `release`) at the time a release train "leaves" will be shipped to the App Store. This approach is implemented by most large iOS apps.
+多くの企業は `リリーストレイン`（新しいアプリをリリースするスケジュール）の概念を用います。リリーストレインが"出発する"ときにメインのブランチ（`master` や `release` など）にマージされたすべてのコードが App Store へ出荷されます。このアプローチは大規模な iOS アプリのほとんどで実装されています。
