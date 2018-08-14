@@ -1,23 +1,23 @@
-While the majority of your end-users will update to the most recent update within a few weeks, there will always be a subset of users who won't. This can have multiple reasons. Often it is related to the iOS version they run, which they can't always update depending on how old the given iOS device is.
+大部分のエンドユーザーは数週間以内に最新のアップデートに更新されますが、そうしないユーザーのサブセットが常に存在します。 これには複数の理由があります。 多くの場合、実行している iOS バージョンに関連していて、指定した iOS デバイスに依存して更新できないことがあります。
 
-You can install and use Facebook Messenger on a first-generation iPad (2010). While newer features are not supported, the core functionality is still available thanks to API versioning.
+第1世代の iPad (2010) 上で Facebook Messenger をインストールして使うことができます。新しい機能はサポートされませんが API バージョニングのおかげでコア機能は引き続き利用できます。
 
-The basic concept is that you don't update an existing API, but add a new one instead and let them run in parallel
+基本的なコンセプトは既存の API を更新するのではなく代わりに新しい API を追加して、並行して実行させることです。
 
 ```
 https://your-api.com/1.0/drivers.json
 https://your-api.com/1.1/drivers.json
 ```
 
-You may eventually need to turn off or slightly change semantics of an API. Even if your company has a deep commitment to stability, sometimes matters of law force this change. This means you should encode an API endpoint that is queriable just to indicate the API status.
+最終的には、API のセマンティクスを無効にするか、わずかに変更する必要があります。 たとえあなたの会社が安定性に深いコミットメントを持っていても、法律の問題がこの変更を強制することがあります。 つまり、API ステータスを示すために照会できる API エンドポイントをエンコードする必要があります。
 
 ```
 https://your-api.com/1.0/status.json
 https://your-api.com/1.1/status.json
 ```
 
-The status API should include information such as
+ステータス API には次のような情報を含めるべきです。
 
- - What's the stage of the API? (e.g. testing, beta, production)
- - Is the API deprecated? If so, what date is it scheduled to be turned off?
- - Is the API offline? If so, will it remain so or is it a temporary outage?
+ - API のステージは何か（例: テスト、ベータ、プロダクション）
+ - API は非推奨か、もしそうならいつそうなるか？
+ - API はオフラインか？そのままなのか、一時的な停止か？
