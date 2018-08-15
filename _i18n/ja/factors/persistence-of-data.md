@@ -1,16 +1,16 @@
-Storing data and configuration according to Apple's guideline is crucial for your app's lifecycle, in particular when it comes to iCloud sync, upgrading to a new phone and restoring a phone from a backup.
+Apple のガイドラインに従ったデータや設定の保存は、アプリのライフサイクル、特にiCloudの同期、新しい iPhone へのアップグレード、バックアップからの復元に不可欠です。
 
-Make sure to follow Apple's official [iOS Data Storage Guidelines](https://developer.apple.com/icloud/documentation/data-storage/index.html):
+必ず Apple 公式の [iOS Data Storage Guidelines](https://developer.apple.com/icloud/documentation/data-storage/index.html) に従ってください。
 
-- `Documents`: Use this directory for user-generated content, it will be backed up
-- `Caches`: Use this directory for data that can be regenerated
-- `tmp`: Use this directory for temporary files
+- `Documents`: ユーザーが生成したコンテンツ用、バックアップされる
+- `Caches`: 再生成可能なデータ用
+- `tmp`: 一時的なファイル用
 - Make use of the `do not back up` attribute for files
 
-Never store sensitive user-information (like passwords or sessions) in those directories. Instead use the Keychain API.
+機密なユーザー情報（パスワードやセッションなど）をこれらのディレクトリに保存しないでください。代わりに Keychain API を使います。
 
-The Keychain API gives you control of how data is being stored on device. Make sure you have a good understanding of how the [various attributes](https://developer.apple.com/documentation/security/keychain_services/keychain_items/item_attribute_keys_and_values) affect the lifecycle of your app.
+Keychain APIを使用すると、データをデバイスに保存する方法を制御できます。 [さまざまな属性](https://developer.apple.com/documentation/security/keychain_services/keychain_items/item_attribute_keys_and_values) がアプリのライフサイクルにどのように影響するかをよく理解していることを確認してください。
 
-One often overlooked question you should ask yourself: When the user upgrades to a new iOS device, should the data (e.g. login session) be migrated as well?
+あなた自身に問いかけるべき見落としがちな質問: ユーザーが新しいiOS端末にアップグレードしたときに、データ（ログインセッションなど）も移行する必要がありますか？
 
-If you use [`kSecAttrAccessibleWhenUnlockedThisDeviceOnly`](https://developer.apple.com/documentation/security/ksecattraccessiblewhenunlockedthisdeviceonly) the data won't be included in the iCloud or iTunes backup, meaning the user will lose the data when they upgrade their device.
+[`kSecAttrAccessibleWhenUnlockedThisDeviceOnly`](https://developer.apple.com/documentation/security/ksecattraccessiblewhenunlockedthisdeviceonly) を使うとデータは iCloud や iTunes backup には含まれず、デバイスをアップグレードしたときにデータを失います。
