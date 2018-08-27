@@ -2,7 +2,7 @@
 
 明示的に依存関係を宣言するメリットは、アプリを初めて使用する開発者向けの設定を簡素化するだけでなく、再現可能な方法で過去のビルドを再実行できる信頼できるビルドシステムを持つことです。 新しい開発者は、開発マシンにアプリケーションのコードベースをチェックアウトすることができます。これには、言語ランタイムと依存関係マネージャーだけが前提条件としてインストールされている必要があります。 彼らは決定的なビルドコマンドでアプリケーションのコードを実行するために必要なものすべてを設定することができます。
 
-**正確な依存関係を指定することで、6か月前から遡ってビルドできます。By specifying the exact dependencies you can re-trigger a build from 6 months ago, knowing that it will succeed** 正確な依存関係を指定することで、6か月前からビルドを再トリガーすることができます.Xcode、CocoaPods、Swiftの同じバージョンを使用するため、ビルドが成功することがわかります。
+**正確な依存関係を指定することで、6か月前から遡ってビルドし直すことができます。**Xcode、CocoaPods、Swiftの同じバージョンを使用するためビルドが成功することがわかっています。
 
 iOS 開発は Web 開発のようにはコンテナ化されておらず、Apple が公式のソリューション（([rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712)）を提供するまで、この要件を満たすサードパーティのツールに限られています。
 
@@ -16,7 +16,7 @@ Appleは [Swift Package Manager](https://swift.org/package-manager) に関する
 
 iOS プロジェクトのルートディレクトリで [.xcode-version](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) ファイルを使えば、Xcode の正確なバージョンを宣言することができます。.
 
-この方法では、CI システムが指定されたバージョンの Xcode を自動的にインストールして使うよう構成することができます。（インストール済みの）Xcode のバージョンを切り替えるには、[chxcode](https://github.com/klaaspieter/chxcode) のようなツールを使うことができます。
+この方法では、CI システムが指定されたバージョンの Xcode を自動的にインストールして利用するように構成することができます。（インストール済みの）Xcode のバージョンを切り替えるには、[chxcode](https://github.com/klaaspieter/chxcode) のようなツールを使うことができます。
 
 Xcode のインストールを自動化するには、Apple が Xcode をインストールするコマンドラインツール（[rdar://40669425](https://openradar.appspot.com/radar?id=5064112975380480)）を提供するまではサードパーティ製ツールである [xcode-install](https://github.com/krausefx/xcode-install) を使います。
 
@@ -31,7 +31,7 @@ gem "fastlane", ">= 2.96.1", "<= 3.0.0"
 gem "cocoapods", "~> 1.5"
 ```
 
-`Gemfile` と自動的に生成される `Gemfile.lock` は Ruby ベースバージョン管理システムにチェックインされます。ビルドシステムは Ruby ベースの依存関係をインストールするために `bundle install` を実行します。
+`Gemfile` と自動的に生成される `Gemfile.lock` は Ruby ベースのバージョン管理システムにチェックインしなければなりません。そうするとビルドシステムは Ruby ベースの依存関係をインストールするために `bundle install` を実行することができます。
 
 #### JavaScript ベースのツール
 
@@ -52,4 +52,4 @@ JavaScript ベースの iOS アプリ（例: React Native）は、`package.json`
 }
 ```
 
-`package.json` は再現可能なビルドのバージョン管理にチェックインされます。
+`package.json` は再現可能なビルドのバージョン管理にチェックするべきです。
