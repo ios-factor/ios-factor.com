@@ -1,14 +1,14 @@
 [Dependencies](/dependencies) で述べたように、コードのリポジトリは iOS アプリのビルド、テスト、リリースに必要なすべての依存関係を含むべきです。
 
-その要件を満たせば、**どんな** macOS のマシンからでもアプリをリリースできます。
+その要件を満たせば、**どんな** macOS のマシンからでもアプリをリリースすることができます。
 
-理想では、アプリをリリースするために
+理想では、アプリをリリースするために、
 
 - 完全に空の、一時的なコンテナを生成する
 - 自動的にすべての依存関係をインストールする（Xcode や [CocoaPods](https://cocoapods.org) など）
 - デプロイスクリプトを実行する（[fastlane](https://fastlane.tools) など）
 
-残念ながら、Xcode は macOS 上で動かす必要があるためUnfortunately, due to the fact that Xcode has to run on macOS, and macOS virtualization comes with technical as well as legal challenges, we can't use this approach ([rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712)). [Veertu](https://veertu.com/) というサードパーティー製の商用ソリューションで Apple のハードウェア上で macOS の仮想環境を構築することができます。There is a 3rd party commercial (closed source) solution called Veertu that allows you to generate virtual macOS environments on Apple hardware.
+残念ながら、Xcode は macOS 上で動かす必要があり、macOS の仮想化は技術的にも法的にも課題があるため、私たちはこのアプローチを利用することができません（[rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712))。[Veertu](https://veertu.com/) というサードパーティー製の商用ソリューションで Apple のハードウェア上で macOS の仮想環境を構築することができます。
 
 近年、使い捨てのコンテナはさまざまな理由で人気を得ています。
 
