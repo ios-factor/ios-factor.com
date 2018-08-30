@@ -10,7 +10,7 @@ iOS 開発は Web 開発のようにはコンテナ化されておらず、Apple
 
 #### Swift ベースのツール
 
-Appleは [Swift Package Manager](https://swift.org/package-manager) に関する優れたガイドを提供しています。
+Apple は [Swift Package Manager](https://swift.org/package-manager) に関する優れたガイドを提供しています。
 
 #### Xcode のバージョン指定
 
@@ -22,7 +22,7 @@ Xcode のインストールを自動化するには、Apple が Xcode をイン�
 
 #### Ruby ベースのツール
 
-Ruby は `Gemfile` で正確な依存関係を定義するために [bundler](https://bundler.io) を使います。:
+Ruby は `Gemfile` で正確な依存関係を定義するために [bundler](https://bundler.io) を使います。
 
 ```ruby
 source "https://rubygems.org"
