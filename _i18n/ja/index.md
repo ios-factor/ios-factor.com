@@ -1,27 +1,27 @@
-iOS-factor was inspired by the famous [twelve-factor app framework](https://www.12factor.net/), a methodology to write high-quality web services. iOS-factor uses the same structure and similar principles, re-written and applied to the iOS app development processes.
+iOS-factor は高品質の Web サービスを作成するための方法論である [twelve-factor app framework](https://www.12factor.net/) にインスパイアされました。iOS-factor は同じ構造とよく似た原則を使い、それらは iOS アプリ開発プロセスに書き換えて適用されています。
 
-## Background
+## 背景
 
-Over the past 10 years, the iOS development process has shifted drastically:
+ここ10年で iOS アプリ開発のプロセスは劇的に変わりました。
 
-- from supporting a single device to a wide range of available iOS-powered iPhones and iPads and various platforms like tvOS and watchOS
-- from manually including git submodules to using dependency managers
-- from iOS apps mostly running locally on-device, to iOS apps heavily relying on backend services
-- from iOS app review times of more than 2 weeks to less than a day
-- from installing an app on your phone using iTunes to distributing apps through the official TestFlight channel
-- from uploading 5 screenshots per language to iTunes Connect to 110 per language, as well as app previews
-- from plain Objective-C/C++ apps to a mix of languages including JavaScript
-- from slow releases whenever something is ready, to shipping every single week
-- from full releases to A/B testing, slow rollouts and automatic regression detection
+- 1つのデバイスのサポートから iOS 対応の iPhone や iPad など多種多様なデバイスと tvOS や watchOS のようなさまざまなプラットフォームのサポートへ
+- git のサブモジュールとしての手動追加から依存関係マネージャーの利用へ
+- 大部分がローカルのデバイス上で実行される iOS アプリからバックエンドサービスに大きく依存するアプリへ
+- iOS アプリのレビューが2週間以上から1日以内へ
+- iTunes を使った iPhone へのインストールから公式の TestFlight を通じてのアプリ配布へ
+- iTunes Connect に言語ごとに5個のスクリーンショットをアップロードから、言語ごとに110個のスクリーンショットだけでなくアプリプレビューもアップロードへ
+- 単純な Objective-C/C++ アプリから、JavaScript を含むさまざまな言語の組み合わせへ
+- いつ何かが準備ができているとしてもゆっくりしたリリースから、毎週のリリースへ
+- フルリリースから A/B テスト、ゆるやかなロールアウト、自動的なあと戻り検出へ
 
-## What's iOS-factor?
+## iOS-factor とは何か？
 
-iOS-factor is an experimental project started in May 2018. It aims to provide a collection of best practices for building high-end iOS applications. Each topic is covered by a `factor`, which describes an ideal state of how a certain category of the iOS app development process could look like.
+iOS-factor とは2018年5月に始まった実験的なプロジェクトです。高品質の iOS アプリ構築するためのベストプラクティス集を提供することを目指しています。それぞれのトピックは iOS アプリ開発プロセスのカテゴリがあるべき理想的な状態を表す `factor` でカバーされています。
 
-Due to certain limitations (like Xcode running only on macOS) not all requirements can be fulfilled. This project aims to define goals, as well as the best current approaches to solve some of the challenges we're facing.
+（Xcode が macOS 上でしか動作しないように）いくつかの制約のためにすべてを満たすことはできません。このプロジェクトは、私たちが直面している課題のいくつかを解決するためのベストな最新のアプローチだけでなく目標を定義することを目指しています。
 
-iOS-factor is all about the bigger-picture iOS app development processes and architecture decisions and will not cover any language specific challenges.
+iOS-factor は大局的な iOS アプリの開発プロセスやアーキテクチャーの意思決定がすべてであり、言語特有の課題は扱いません。
 
-This is a living project, maintained by the iOS developer community. You can find the full source on [GitHub](https://github.com/ios-factor/ios-factor.com) and update existing pages or add new factors.
+これは iOS デベロッパーコミュニティによってメンテナンスされている生きたプロジェクトです。[GitHub](https://github.com/ios-factor/ios-factor.com) で完全なソースを手に入れて、既存のページを更新したり新しいファクターを追加することができます。
 
 -----

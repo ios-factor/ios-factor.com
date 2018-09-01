@@ -20,7 +20,7 @@
 
 - [xcode-install](https://github.com/krausefx/xcode-install) を使って Xcode インストールを自動化する
 - 正確な Xcode バージョンを指定するために [.xcode-version ファイル](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) を使う
-- 設定ファイルですべての依存関係を定義する（[Dependencies](/dependencies) ファクターを参照)
+- 設定ファイルですべての依存関係を定義する（[Dependencies](/dependencies) ファクターを参照）
 - [fastlane](https://fastlane.tools) のようなデプロイツールを使った完全なデプロイプロセスの自動化する
 - コード署名を自動化する（例: [codesigning.guide](https://codesigning.guide)）
 - 頻繁に、理想的には毎週デプロイする

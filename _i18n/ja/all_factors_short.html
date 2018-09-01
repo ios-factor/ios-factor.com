@@ -5,11 +5,11 @@
     {% assign currentFactorURL = "/" | append: factor.link %}
     {% if currentFactorURL == page.url %}
       <b class="selected-factor">
-        {{factor.index}}. {{ factor.en.title }}
+        {{factor.index}}. {{ factor.ja.title }}
       </b>
     {% else %}
       <a href="{{factor.link}}">
-        {{factor.index}}. {{ factor.en.title }}
+        {{factor.index}}. {{ factor.ja.title }}
       </a>
     {% endif %}
   </li>

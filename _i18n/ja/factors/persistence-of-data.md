@@ -2,9 +2,9 @@ Apple のガイドラインに従ったデータや設定の保存は、アプ�
 
 必ず Apple 公式の [iOS Data Storage Guidelines](https://developer.apple.com/icloud/documentation/data-storage/index.html) に従ってください。
 
-- `Documents`: ユーザーが生成したコンテンツ用、バックアップされる
-- `Caches`: 再生成可能なデータ用
-- `tmp`: 一時的なファイル用
+- `Documents`：ユーザーが生成したコンテンツ用、バックアップされる
+- `Caches`：再生成可能なデータ用
+- `tmp`：一時的なファイル用
 - ファイルの `do not back up` 属性を利用する
 
 機密なユーザー情報（パスワードやセッションなど）をこれらのディレクトリに保存しないでください。代わりに Keychain API を使います。

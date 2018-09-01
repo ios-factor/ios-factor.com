@@ -4,7 +4,7 @@
 
 **正確な依存関係を指定することで、6か月前から遡ってビルドし直すことができます。**Xcode、CocoaPods、Swiftの同じバージョンを使用するためビルドが成功することがわかっています。
 
-iOS 開発は Web 開発のようにはコンテナ化されておらず、Apple が公式のソリューション（([rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712)）を提供するまで、この要件を満たすサードパーティのツールに限られています。
+iOS 開発は Web 開発のようにはコンテナ化されておらず、Apple が公式のソリューション（[rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712)）を提供するまで、この要件を満たすサードパーティのツールに限られています。
 
 当面は、さまざまなサードパーティのツールを使用することで依存関係を明示的に宣言することができます。
 
@@ -14,7 +14,7 @@ Apple は [Swift Package Manager](https://swift.org/package-manager) に関す�
 
 #### Xcode のバージョン指定
 
-iOS プロジェクトのルートディレクトリで [.xcode-version](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) ファイルを使えば、Xcode の正確なバージョンを宣言することができます。.
+iOS プロジェクトのルートディレクトリで [.xcode-version](https://github.com/fastlane/ci/blob/master/docs/xcode-version.md) ファイルを使えば、Xcode の正確なバージョンを宣言することができます。
 
 この方法では、CI システムが指定されたバージョンの Xcode を自動的にインストールして利用するように構成することができます。（インストール済みの）Xcode のバージョンを切り替えるには、[chxcode](https://github.com/klaaspieter/chxcode) のようなツールを使うことができます。
 
