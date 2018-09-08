@@ -10,6 +10,9 @@
   es:
     title: Dependencias
     subtitle: Declarar y aislar dependencias explícitamente.
+  ja:
+    title: Dependencies
+    subtitle: 明示的に依存関係を宣言して分離する
   link: dependencies
   index: "I"
 - en:
@@ -24,6 +27,9 @@
   es:
     title: Configuración
     subtitle: Mantener configuración por fuera del código, desplegar incluyendo configuración por defecto y permitir actualizaciones "Over-the-Air".
+  ja:
+    title: Config
+    subtitle: コードに設定を書かない、デフォルト設定で出荷、OTA アップデートを許可する
   link: config
   index: "II"
 - en:
@@ -38,6 +44,9 @@
   es:
     title: Simetría entre ambientes de desarrollo y producción
     subtitle: Mantener los ambientes de desarrollo, pruebas y producción tan similares como sea posible.
+  ja:
+    title: Dev/prod parity
+    subtitle: 開発、テスト、プロダクションはできるだけ同じにする
   link: dev-prod-parity
   index: "III"
 - en:
@@ -52,6 +61,9 @@
   es:
     title: Despliegue
     subtitle: Automatizar el despliegue de manera que pueda ser publicado desde cualquier ordenador.
+  ja:
+    title: Deployment
+    subtitle: デプロイを自動化すればどのマシンからでもリリースできる
   link: deployment
   index: "IV"
 - en:
@@ -66,6 +78,9 @@
   es:
     title: Preferir local en vez de remoto
     subtitle: En lo posible, mantener la aplicación iOS lo suficientemente inteligente como para operar sin back-end.
+  ja:
+    title: Prefer local over remote
+    subtitle: できるだけバックエンドなしで動作するように iOS アプリをスマートに保つ
   link: prefer-local-over-remote
   index: "V"
 - en:
@@ -80,6 +95,9 @@
   es:
     title: APIs retroactivamente compatibles
     subtitle: Nunca asumir que cada usuario actualiza a la versión más reciente.
+  ja:
+    title: Backwards compatible APIs
+    subtitle: すべてのユーザーが最新バージョンにアップデートすることを前提としない
   link: backwards-compatible-apis
   index: "VI"
 - en:
@@ -94,6 +112,9 @@
   es:
     title: Versionamiento de la aplicación
     subtitle: Automatizar la versión y el número de compilación para mantener consistencia.
+  ja:
+    title: App versioning
+    subtitle: 一貫性を保つためにアプリのビルド番号とバージョン番号を自動採番する
   link: app-versioning
   index: "VII"
 - en:
@@ -108,5 +129,8 @@
   es:
     title: Persistencia de datos
     subtitle: Seguir los lineamientos de Apple al almacenar información.
+  ja:
+    title: Persistence of data
+    subtitle: データを保存する際は Apple のガイドラインに従う
   link: persistence-of-data
   index: "VIII"
