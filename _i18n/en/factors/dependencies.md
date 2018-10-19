@@ -1,4 +1,4 @@
-**Ideally, an iOS-factor app never relies on the implicit existence of system-wide packages.** It declares all dependencies, completely and exactly via a dependency declaration manifest. This includes the exact versions of [Xcode](https://developer.apple.com/xcode), [CocoaPods](https://cocoapods.org) and [fastlane](https://fastlane.tools).
+**Ideally, your build tools never rely on the implicit existence of system-wide packages.** It declares all dependencies, completely and exactly via a dependency declaration manifest. This includes the exact versions of [Xcode](https://developer.apple.com/xcode), [CocoaPods](https://cocoapods.org) and [fastlane](https://fastlane.tools).
 
 The benefit of explicit dependency declaration is that it simplifies setup for developers new to the app, as well as having a reliable build system that is also able to run past builds again in a reproducible fashion. A new developer can check out the app’s codebase onto their development machine, requiring only the language runtime and dependency manager installed as prerequisites. They will be able to set up everything needed to run the app’s code with a deterministic build command.
 
