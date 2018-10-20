@@ -39,16 +39,16 @@ gem "cocoapods", "~> 1.5"
 
 ```json
 {
-...
-"scripts": {
-"start": "node node_modules/react-native/local-cli/cli.js start",
-"test": "jest"
-},
-"dependencies": {
-"react": "15.4.2",
-"react-native": "0.42.3",
-...
-}
+  ...
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "15.4.2",
+    "react-native": "0.42.3",
+    ...
+  }
 }
 ```
 
