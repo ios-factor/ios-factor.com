@@ -14,8 +14,8 @@
     title: Dependencies
     subtitle: 明示的に依存関係を宣言して分離する
   zh_cn:
-    title: 依赖（Dependencies）
-    subtitle: 显式声明及依赖分离
+    title: 依赖
+    subtitle: 显式声明及分离依赖
   link: dependencies
   index: "I"
 - en:
@@ -34,8 +34,8 @@
     title: Config
     subtitle: コードに設定を書かない、デフォルト設定で出荷、OTA アップデートを許可する
   zh_cn:
-    title: 配置（Config）
-    subtitle: 无需在代码中进行配置，使用默认配置发布，并且允许 OTA 升级
+    title: 配置
+    subtitle: 配置不要写在代码，使用默认配置发布并允许 OTA 升级配置
   link: config
   index: "II"
 - en:
@@ -54,8 +54,8 @@
     title: Dev/prod parity
     subtitle: 開発、テスト、プロダクションはできるだけ同じにする
   zh_cn: 
-    title: 开发/产品 对等（Dev/prod parity）
-    subtitle: 开发、测试以及产品应尽量保持一致
+    title: 开发环境和生产环境等价
+    subtitle: 尽可能保证开发，预发布，线上环境相同
   link: dev-prod-parity
   index: "III"
 - en:
@@ -74,8 +74,8 @@
     title: Deployment
     subtitle: デプロイを自動化すればどのマシンからでもリリースできる
   zh_cn: 
-    title: 发布（Deployment）
-    subtitle: 使发布过程自动化，这样你就可以在任何机器上发布了。
+    title: 部署
+    subtitle: 自动化部署，这样在任何机器上都能快速完成部署。
   link: deployment
   index: "IV"
 - en:
@@ -94,8 +94,8 @@
     title: Prefer local over remote
     subtitle: できるだけバックエンドなしで動作するように iOS アプリをスマートに保つ
   zh_cn: 
-    title: 本地大于远程（Prefer local over remote）
-    subtitle: 把你的 iOS app 打造成一个尽量不需要依赖后端的应用
+    title: 本地大于远程
+    subtitle: iOS 应用尽可能不要依赖后台
   link: prefer-local-over-remote
   index: "V"
 - en:
@@ -114,8 +114,8 @@
     title: Backwards compatible APIs
     subtitle: すべてのユーザーが最新バージョンにアップデートすることを前提としない
   zh_cn: 
-    title: 后向兼容的接口（Backwards compatible APIs）
-    subtitle: 并不是每个用户都喜欢升级到最新版本
+    title: 接口的后向兼容性
+    subtitle: 并不是每个用户都会升级到最新版本
   link: backwards-compatible-apis
   index: "VI"
 - en:
@@ -134,8 +134,8 @@
     title: App versioning
     subtitle: 一貫性を保つためにアプリのビルド番号とバージョン番号を自動採番する
   zh_cn: 
-    title: App 版本（App versioning）
-    subtitle: 采用自动化的手段，保证 build number 和 version number 的一致性
+    title: 应用版本管理
+    subtitle: 通过自动化保证编译号和版本号的一致性
   link: app-versioning
   index: "VII"
 - en:
@@ -154,7 +154,7 @@
     title: Persistence of data
     subtitle: データを保存する際は Apple のガイドラインに従う
   zh_cn: 
-    title: 数据持久化（Persistence of data）
-    subtitle: 存储数据的时候请参考 Apple 的文档
+    title: 数据持久化
+    subtitle: 数据的存储请参考苹果官方文档
   link: persistence-of-data
   index: "VIII"
