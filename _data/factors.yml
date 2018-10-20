@@ -13,6 +13,9 @@
   ja:
     title: Dependencies
     subtitle: 明示的に依存関係を宣言して分離する
+  zh_cn:
+    title: 依赖
+    subtitle: 显式声明及分离依赖
   link: dependencies
   index: "I"
 - en:
@@ -30,6 +33,9 @@
   ja:
     title: Config
     subtitle: コードに設定を書かない、デフォルト設定で出荷、OTA アップデートを許可する
+  zh_cn:
+    title: 配置
+    subtitle: 配置不要写在代码中，使用默认配置发布并允许 OTA 升级配置
   link: config
   index: "II"
 - en:
@@ -47,6 +53,9 @@
   ja:
     title: Dev/prod parity
     subtitle: 開発、テスト、プロダクションはできるだけ同じにする
+  zh_cn: 
+    title: 开发环境和生产环境等价
+    subtitle: 尽可能保证开发，预发布，线上环境相同
   link: dev-prod-parity
   index: "III"
 - en:
@@ -64,6 +73,9 @@
   ja:
     title: Deployment
     subtitle: デプロイを自動化すればどのマシンからでもリリースできる
+  zh_cn: 
+    title: 部署
+    subtitle: 自动化部署，这样在任何机器上都能快速完成部署。
   link: deployment
   index: "IV"
 - en:
@@ -81,6 +93,9 @@
   ja:
     title: Prefer local over remote
     subtitle: できるだけバックエンドなしで動作するように iOS アプリをスマートに保つ
+  zh_cn: 
+    title: 本地大于远程
+    subtitle: iOS 应用尽可能不要依赖后台
   link: prefer-local-over-remote
   index: "V"
 - en:
@@ -98,6 +113,9 @@
   ja:
     title: Backwards compatible APIs
     subtitle: すべてのユーザーが最新バージョンにアップデートすることを前提としない
+  zh_cn: 
+    title: 接口的后向兼容性
+    subtitle: 并不是每个用户都会升级到最新版本
   link: backwards-compatible-apis
   index: "VI"
 - en:
@@ -115,6 +133,9 @@
   ja:
     title: App versioning
     subtitle: 一貫性を保つためにアプリのビルド番号とバージョン番号を自動採番する
+  zh_cn: 
+    title: 应用版本管理
+    subtitle: 通过自动化保证编译号和版本号的一致性
   link: app-versioning
   index: "VII"
 - en:
@@ -132,5 +153,8 @@
   ja:
     title: Persistence of data
     subtitle: データを保存する際は Apple のガイドラインに従う
+  zh_cn: 
+    title: 数据持久化
+    subtitle: 数据的存储请参考苹果官方文档
   link: persistence-of-data
   index: "VIII"
