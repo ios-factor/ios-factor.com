@@ -38,12 +38,13 @@ gems:
   - jekyll-multiple-languages-plugin
 
 # Multi Languages
-languages: ["en", "ko", "pt_BR", "es", "ja"]
+languages: ["en", "ko", "pt_BR", "es", "ja", "zh_cn"]
 exclude_from_localizations: ["javascript", "images", "css"]
 language_default: "en"
 languageNames:
   en: English
-  ko: Korean
+  ko: 한국어
   pt_BR: Brazilian Portuguese
-  es: Spanish
-  ja: Japanese
+  es: Español
+  ja: 日本語
+  zh_cn: 简体中文
