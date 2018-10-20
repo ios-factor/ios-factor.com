@@ -12,4 +12,4 @@
 
 你应该问自己一个问题——这个问题经常被人所忽视——当用户升级到了一个新的 iOS 设备，数据（如：登录会话）是否也应该迁移过去？
 
-如果你使用 [`kSecAttrAccessibleWhenUnlockedThisDeviceOnly`](https://developer.apple.com/documentation/security/ksecattraccessiblewhenunlockedthisdeviceonly)属性，则数据不会被包含在 iCloud 或 iTunes 的备份中，这意味着用户在升级他们设备的时候会丢失掉这些数据。
+如果你使用 [`kSecAttrAccessibleWhenUnlockedThisDeviceOnly`](https://developer.apple.com/documentation/security/ksecattraccessiblewhenunlockedthisdeviceonly) 属性，则数据不会被 iCloud 或 iTunes 的备份，这意味着用户如果更新他们的设备，则会丢失这些数据。

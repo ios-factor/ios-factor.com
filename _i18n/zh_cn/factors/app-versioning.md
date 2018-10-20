@@ -15,7 +15,7 @@ agvtool new-marketing-version 2.0
 agvtool next-version -all
 ```
 
-如果你正在使用部署工具 [fastlane](https://fastlane.tools)，那么你可以使用 [increment_version_number](https://docs.fastlane.tools/actions/increment_version_number/) 和 [increment_build_number](https://docs.fastlane.tools/actions/increment_build_number/)，将版本自动化作为部署步骤的一部分
+如果你正在使用 [fastlane](https://fastlane.tools) 作为部署工具，那么你可以使用 [increment_version_number](https://docs.fastlane.tools/actions/increment_version_number/) 和 [increment_build_number](https://docs.fastlane.tools/actions/increment_build_number/)，将版本自动化作为部署步骤的一部分
 
 `Fastfile` 例子：
 

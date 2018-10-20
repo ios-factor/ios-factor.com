@@ -1,4 +1,4 @@
-**理想情况下，iOS-factor 应用使用到的系统级的依赖库不应该“不可见”。**应用应该在一张清单上完整且准确地声明所有的依赖。这些依赖包括 [Xcode](https://developer.apple.com/xcode)、[CocoaPods](https://cocoapods.org/)和 [fastlane](https://fastlane.tools/) 的准确版本。
+**理想情况下，构建工具不应依赖于“不可见”的系统级的库。**应用应在一张清单上完整且准确地声明所有的依赖。这些依赖包括 [Xcode](https://developer.apple.com/xcode)、[CocoaPods](https://cocoapods.org/)和 [fastlane](https://fastlane.tools/) 的准确版本。
 
 显式声明依赖的好处在于，那些刚接触该应用的开发人员可以更便捷地完成安装及设置，同时也能拥有一个稳定的构建系统，这样历史构建也能顺利运行。新的开发人员可以将应用的代码库检出到开发机器上，而他仅需搞定语言的运行时环境，以及使用依赖管理器安装依赖。它们会使用确定好的构建命令设置好应用代码运行所需的一切。
 

@@ -35,7 +35,7 @@
     subtitle: コードに設定を書かない、デフォルト設定で出荷、OTA アップデートを許可する
   zh_cn:
     title: 配置
-    subtitle: 配置不要写在代码，使用默认配置发布并允许 OTA 升级配置
+    subtitle: 配置不要写在代码中，使用默认配置发布并允许 OTA 升级配置
   link: config
   index: "II"
 - en:
