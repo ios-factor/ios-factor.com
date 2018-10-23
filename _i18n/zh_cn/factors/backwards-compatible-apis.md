@@ -9,7 +9,7 @@ https://your-api.com/1.0/drivers.json
 https://your-api.com/1.1/drivers.json
 ```
 
-你最终可能还是需要对 API 进行关闭或是一些小改动。即使公司对稳定性有着很高要求，但有时候为了合规则必须进行改动。这意味着你应该对 API 端点进行可查询编码，用以表示该 API 的状态。
+你可能最终还是需要关闭 API 或是对其做一些小改动。即使公司对稳定性有着很高要求，但有时候为了合规必须着手修改。这意味着你应该对 API 端点进行可查询编码，用以表示该 API 的状态。
 
 ```
 https://your-api.com/1.0/status.json
