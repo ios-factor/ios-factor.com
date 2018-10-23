@@ -10,6 +10,6 @@
 
 钥匙串 API 可以让你控制数据的存储方式。请确保你对[这些属性](https://developer.apple.com/documentation/security/keychain_services/keychain_items/item_attribute_keys_and_values)是如何影响应用的生命周期有着足够的理解。
 
-你应该问自己一个问题——这个问题经常被人所忽视——当用户升级到了一个新的 iOS 设备，数据（如：登录会话）是否也应该迁移过去？
+你应该问自己一个问题——这个问题经常被人忽视——当用户升级到了一个新的 iOS 设备，数据（如：登录会话）是否也应该迁移过去？
 
 如果你使用 [`kSecAttrAccessibleWhenUnlockedThisDeviceOnly`](https://developer.apple.com/documentation/security/ksecattraccessiblewhenunlockedthisdeviceonly) 属性，则数据不会被 iCloud 或 iTunes 的备份，这意味着用户如果更新他们的设备，则会丢失这些数据。
