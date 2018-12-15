@@ -139,6 +139,11 @@
   link: app-versioning
   index: "VII"
 - en:
+    title: Rollbacks
+    subtitle: Reverting a build that causes issues
+  link: rollbacks
+  index: "VIII"
+- en:
     title: Persistence of data
     subtitle: Follow the Apple guidelines when storing data
   ko:
@@ -157,4 +162,4 @@
     title: 数据持久化
     subtitle: 数据的存储请参考苹果官方文档
   link: persistence-of-data
-  index: "VIII"
+  index: "IX"
