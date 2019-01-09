@@ -141,6 +141,21 @@
 - en:
     title: Rollbacks
     subtitle: Reverting a build that causes issues
+  ko:
+    title: Rollbacks
+    subtitle: Reverting a build that causes issues
+  pt_BR:
+    title: Rollbacks
+    subtitle: Reverting a build that causes issues
+  es:
+    title: Rollbacks
+    subtitle: Reverting a build that causes issues
+  ja:
+    title: Rollbacks
+    subtitle: Reverting a build that causes issues
+  zh_cn: 
+    title: Rollbacks
+    subtitle: Reverting a build that causes issues
   link: rollbacks
   index: "VIII"
 - en:
