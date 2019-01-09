@@ -6,7 +6,7 @@ Using phased releases, you can slowly rollout a build to production, starting wi
 
 However even with phased releases, there is no way to completely revoke a build: Once a build is installed on a user's device, the only way to change that build is to distribute a new one with an updated version/build number.
 
-#### [Recommended]: Version bump & Release
+#### Recommended: Version bump & Release
 
 Just like with phased releases, App Store and TestFlight builds can only be updated by doing the following:
 
@@ -18,7 +18,7 @@ Just like with phased releases, App Store and TestFlight builds can only be upda
 
 The above steps can be done manually, however it is recommended to fully automate the process to be able to react fast.
 
-#### [Alternative]: Resign an old build
+#### Alternative: Resign an old build
 
 An alternative approach that some teams might want to pick up
 
