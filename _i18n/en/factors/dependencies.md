@@ -4,7 +4,7 @@ The benefit of explicit dependency declaration is that it simplifies setup for d
 
 **By specifying the exact dependencies you can re-trigger a build from 6 months ago, knowing that it will succeed** as it will use the same version of Xcode, CocoaPods and Swift.
 
-Since iOS development cannot be containerized like it's already the case for web development, we're limited to third party tools trying to fulfill this requirement until Apple provides an official solution ([rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712)).
+Since iOS development cannot be containerized like it's already the case for web development, we're limited to third party tools trying to fulfill this requirement until Apple provides an official solution ([rdar://40669395](https://openradar.appspot.com/radar?id=4929082424819712)). There is a 3rd party commercial (closed source) solution called [Veertu](https://veertu.com/) that allows you to generate virtual macOS environments on Apple hardware.
 
 For the time being, you can use various third-party tooling to explicitly declare those dependencies.
 
