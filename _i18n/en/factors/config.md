@@ -31,3 +31,4 @@ Some potential approaches when implementing OTA updates of config:
 
 - Implement your own solution
 - Proprietary web services like [Firebase remote config](https://firebase.google.com/docs/remote-config/)
+- Open source service like [FeatureFlags](https://github.com/rwbutler/FeatureFlags)
