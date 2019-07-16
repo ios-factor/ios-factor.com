@@ -38,7 +38,7 @@ gems:
   - jekyll-multiple-languages-plugin
 
 # Multi Languages
-languages: ["en", "ko", "pt_BR", "es", "ja", "zh_cn"]
+languages: ["en", "ko", "pt_BR", "es", "ja", "zh_cn", "ru"]
 exclude_from_localizations: ["javascript", "images", "css"]
 language_default: "en"
 languageNames:
@@ -48,3 +48,4 @@ languageNames:
   es: Español
   ja: 日本語
   zh_cn: 简体中文
+  ru: Русский
