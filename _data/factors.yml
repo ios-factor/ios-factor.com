@@ -16,6 +16,9 @@
   zh_cn:
     title: 依赖
     subtitle: 显式声明及分离依赖
+  ru:
+    title: Зависимости
+    subtitle: Явно объявляйте и изолируйте зависимости
   link: dependencies
   index: "I"
 - en:
@@ -36,6 +39,9 @@
   zh_cn:
     title: 配置
     subtitle: 配置不要写在代码中，使用默认配置发布并允许 OTA 升级配置
+  ru:
+    title: Конфигурация
+    subtitle: Нет конфигурации в коде, поставляется с конфигурацией по умолчанию и разрешить обновления OTA(по воздуху)
   link: config
   index: "II"
 - en:
@@ -56,6 +62,9 @@
   zh_cn: 
     title: 开发环境和生产环境等价
     subtitle: 尽可能保证开发，预发布，线上环境相同
+  ru:
+    title: Паритет разработки/работы приложения
+    subtitle: Держите окружения разработки, промежуточного развёртывания (staging) и рабочего развёртывания (production) максимально похожими
   link: dev-prod-parity
   index: "III"
 - en:
@@ -76,6 +85,9 @@
   zh_cn: 
     title: 部署
     subtitle: 自动化部署，这样在任何机器上都能快速完成部署。
+  ru:
+    title: Развертывания
+    subtitle: Автоматизирывать деплой, чтобы вы могли выпускать его с любой машины.
   link: deployment
   index: "IV"
 - en:
@@ -96,6 +108,9 @@
   zh_cn: 
     title: 本地大于远程
     subtitle: iOS 应用尽可能不要依赖后台
+  ru:
+    title: Локальный против бека
+    subtitle: Держите приложение iOS универсальным, чтобы по возможности работать без бэкэнда
   link: prefer-local-over-remote
   index: "V"
 - en:
@@ -116,6 +131,9 @@
   zh_cn: 
     title: 接口的后向兼容性
     subtitle: 并不是每个用户都会升级到最新版本
+  ru:
+    title: Обратно совместимые API
+    subtitle: Не думайте, что каждый пользователь обновляется до последней версии
   link: backwards-compatible-apis
   index: "VI"
 - en:
@@ -136,6 +154,9 @@
   zh_cn: 
     title: 应用版本管理
     subtitle: 通过自动化保证编译号和版本号的一致性
+  ru:
+    title: Управление версиями приложения
+    subtitle: Автоматизировать поднятие версий и билдов
   link: app-versioning
   index: "VII"
 - en:
@@ -156,6 +177,9 @@
   zh_cn: 
     title: Rollbacks
     subtitle: Reverting a build that causes issues
+  ru:
+    title: Откаты
+    subtitle: Откат сборки, которая вызывает проблемы
   link: rollbacks
   index: "VIII"
 - en:
@@ -176,5 +200,8 @@
   zh_cn: 
     title: 数据持久化
     subtitle: 数据的存储请参考苹果官方文档
+  ru:
+    title: Хранение данных
+    subtitle: Следуйте рекомендациям Apple при хранении данных
   link: persistence-of-data
   index: "IX"
