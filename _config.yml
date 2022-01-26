@@ -17,7 +17,6 @@ title: iOS-factor
 email: ios-factor@krausefx.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ios-factor.com" # the base hostname & protocol for your site, e.g. http://example.com
-google_analytics: UA-18658848-15
 
 # Build settings
 markdown: kramdown

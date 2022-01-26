@@ -1,22 +1,15 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{% t site.description %}"/>
-  <link rel="icon" type="image/png" href="/assets/favicon.png">
-  <link rel="apple-touch-icon" type="image/png" href="/assets/ios-icon.png">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% t site.description %}" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="apple-touch-icon" type="image/png" href="/assets/ios-icon.png">
 
-  <title>
-    {% if page.title == "Home" %}
-      {{ site.title }}
-    {% else %}
-      {{ page.title }} &middot; {{ site.title }}
-    {% endif %}
-  </title>
+    <title>
+        {% if page.title == "Home" %} {{ site.title }} {% else %} {{ page.title }} &middot; {{ site.title }} {% endif %}
+    </title>
 
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
-  {% if site.google_analytics %}
-    {% include analytics.html %}
-  {% endif %}
+    <link rel="stylesheet" href="{{ " /assets/main.css " | relative_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ " /feed.xml " | relative_url }}">
 </head>
