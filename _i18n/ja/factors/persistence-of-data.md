@@ -1,6 +1,6 @@
 Apple のガイドラインに従ったデータや設定の保存は、アプリのライフサイクル、特に iCloud の同期、新しい iPhone へのアップグレード、バックアップからの復元に不可欠です。
 
-必ず Apple 公式の [iOS Data Storage Guidelines](https://developer.apple.com/icloud/documentation/data-storage/index.html) に従ってください。
+必ず Apple 公式の [iOS Data Storage Guidelines](https://developer.apple.com/documentation/foundation/optimizing_your_app_s_data_for_icloud_backup) に従ってください。
 
 - `Documents`：ユーザーが生成したコンテンツ用、バックアップされる
 - `Caches`：再生成可能なデータ用

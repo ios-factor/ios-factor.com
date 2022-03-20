@@ -1,6 +1,6 @@
 Хранение данных и конфигурации в соответствии с рекомендациями Apple имеет решающее значение для жизненного цикла вашего приложения, в частности, когда речь идет о синхронизации iCloud, обновлении до нового телефона и восстановлении телефона из резервной копии.
 
-Обязательно следуйте официальным Apple [iOS Data Storage Guidelines](https://developer.apple.com/icloud/documentation/data-storage/index.html):
+Обязательно следуйте официальным Apple [iOS Data Storage Guidelines](https://developer.apple.com/documentation/foundation/optimizing_your_app_s_data_for_icloud_backup):
 
 - `Documents`: Используйте эту директорию для пользовательского контента, он будет заархивирован
 - `Caches`: Используйте эту директорию для данных, которые могут быть восстановлены
