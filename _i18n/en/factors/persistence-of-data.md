@@ -1,6 +1,6 @@
 Storing data and configuration according to Apple's guideline is crucial for your app's lifecycle, in particular when it comes to iCloud sync, upgrading to a new phone and restoring a phone from a backup.
 
-Make sure to follow Apple's official [iOS Data Storage Guidelines](https://developer.apple.com/icloud/documentation/data-storage/index.html):
+Make sure to follow Apple's official [iOS Data Storage Guidelines](https://developer.apple.com/documentation/foundation/optimizing_your_app_s_data_for_icloud_backup):
 
 - `Documents`: Use this directory for user-generated content, it will be backed up
 - `Caches`: Use this directory for data that can be regenerated
