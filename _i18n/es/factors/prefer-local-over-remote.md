@@ -15,7 +15,7 @@ La mayoría de aplicaciones iOS requieren algún tipo de back-end para ciertas t
 
 Todos los componentes de una aplicación que no necesariamente **necesitan** una conexión a internet (ej. login) deberían funcionar por completo aún sin estar conectados a la red:
 
-- La pantalla de inicio de la aplicación ([que no debería existir en primer lugar](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/)) jamás debe esperar por una primera respuesta exitosa del servidor web, ya que esto causa una mala experiencia de usuario cuando la conexión a internet es mala.
+- La pantalla de inicio de la aplicación ([que no debería existir en primer lugar](https://developer.apple.com/design/human-interface-guidelines/patterns/launching/)) jamás debe esperar por una primera respuesta exitosa del servidor web, ya que esto causa una mala experiencia de usuario cuando la conexión a internet es mala.
 - Si la aplicación requiere una conexión a internet para todo (ej. red social o aplicación de navegación), debería funcionar de todas maneras (en modo de solo lectura) sin una conexión a internet para acceder a información histórica (ej. viajes recientes, mensajería privada).
 - Toda característica de la aplicación que requiera una conexión a internet debería mostrar un mensaje de error claro sobre la incapacidad de conectarse al servidor.
 - Ya que los puntos de acceso WiFi podrían solicitar inicio de sesión o confirmación de algún tipo (ej. hotel o aeropuerto), las solicitudes HTTPS se atascarán con frecuencia y se invalidarán por time-out después de un minuto aproximadamente. Hasta que Apple resuelva este inconveniente a nivel del sistema, nosotros como desarrolladores tenemos que asegurar un manejo adecuado de estas situaciones.
