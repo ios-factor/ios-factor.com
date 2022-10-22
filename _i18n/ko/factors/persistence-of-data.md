@@ -1,6 +1,6 @@
 Apple의 가이드라인에 따라 데이터와 설정을 저장하는 것은 앱의 라이프 사이클에 치명적입니다. 특히 iCloud 동기화, 새로운 폰으로 업그레이드 그리고 백업에서 폰을 복원하는 경우에서 그렇습니다.
 
-Apple의 공식 [iOS 데이터 저장 가이드라인](https://developer.apple.com/icloud/documentation/data-storage/index.html)을 따르고 있는지 확인하세요.
+Apple의 공식 [iOS 데이터 저장 가이드라인](https://developer.apple.com/documentation/foundation/optimizing_your_app_s_data_for_icloud_backup)을 따르고 있는지 확인하세요.
 
 - `Documents`: 이 폴더는 유저가 생성한 컨텐츠를 위해 사용하세요. 이 폴더는 백업이 될 것입니다.
 - `Caches`: 이 폴더는 다시 생성할 수 있는 데이터를 위해 사용하세요.

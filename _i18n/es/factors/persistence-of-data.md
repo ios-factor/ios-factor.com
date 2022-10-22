@@ -1,6 +1,6 @@
 Almacenar información y configuración de acuerdo a los lineamientos de Apple es crucial para el ciclo de vida de la aplicación, en particular cuando se refiere a la sincronización con iCloud, renovación del dispositivo telefónico y restauración de una copia de seguridad en el teléfono.
 
-Asegurarse de seguir los lineamientos oficiales de Apple para [almacenamiento de información en iOS](https://developer.apple.com/icloud/documentation/data-storage/index.html):
+Asegurarse de seguir los lineamientos oficiales de Apple para [almacenamiento de información en iOS](https://developer.apple.com/documentation/foundation/optimizing_your_app_s_data_for_icloud_backup):
 
 - `Documents`: Usar este directorio para contenido generado por el usuario, se genera una copia de respaldo del mismo.
 - `Caches`: Usar este directorio para información que puede ser regenerada.

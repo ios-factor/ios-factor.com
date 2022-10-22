@@ -1,6 +1,6 @@
 De acordo com os guias da Apple, armazenar dados e configurações é fundamental para o ciclo de vida de seu aplicativo, especialmente quando se trata de sincronização com o iCloud, troca de telefone ou restauração de um telefone a partir de um backup.
 
-Certifique-se de seguir o [Guia de armazenamento de dados](https://developer.apple.com/icloud/documentation/data-storage/index.html) oficial da Apple:
+Certifique-se de seguir o [Guia de armazenamento de dados](https://developer.apple.com/documentation/foundation/optimizing_your_app_s_data_for_icloud_backup) oficial da Apple:
 
 - `Documents`: Use esse diretório para conteúdos gerados pelo usuário. Ele será incluído em backups
 - `Caches`: Use esse diretório para dados que possam ser regerados

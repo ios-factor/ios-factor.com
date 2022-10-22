@@ -15,7 +15,7 @@ Most iOS apps require some kind of backend for certain tasks, like authenticatio
 
 All parts of the app that don't necessarily **need** an internet connection (e.g. login) should work without any internet connection at all:
 
-- Your app's startup screen ([that shouldn't exist in the first place](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/)) should never wait for the first successful web response, as this causes bad UX for users with a spotty internet connection.
+- Your app's startup screen ([that shouldn't exist in the first place](https://developer.apple.com/design/human-interface-guidelines/patterns/launching/)) should never wait for the first successful web response, as this causes bad UX for users with a spotty internet connection.
 - If your app requires an internet connection for everything (e.g. social networking app or ride sharing app), your app should still work (in read-only mode) without an internet connection to access historic data (e.g. recent rides, recent direct messages).
 - Any feature of your app that needs a working internet connection should show a clear error message that the server couldn't be reached.
 - As WiFi hotspots might require a login or confirmation of some sorts (e.g. hotel or airport), HTTPS requests will often get stuck and time-out after about a minute. Until Apple resolves this issue on a system level, we as developers have to make sure to properly handle those situations.
